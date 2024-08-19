@@ -1,11 +1,12 @@
 @import './variable.scss';
+@import './color.scss';
 @import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Kanit:wght@100;200;300;400;500;600;700;800&family=Play:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 body,
 html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #ffffff;
+  background-color: $vannila;
   min-height: 100vh;
   font-family: 'Anuphan', sans-serif;
   overflow: hidden;
@@ -26,8 +27,24 @@ button {
 }
 
 p {
-    
+  font-size: 16px;
   font-weight: 400;
+}
+
+.disaply-1 {
+  font-size: 30px;
+}
+
+.disaply-2 {
+  font-size: 24px;
+}
+
+.disaply-3 {
+  font-size: 20px;
+}
+
+.disaply-sm {
+  font-size: 12px;
 }
 
 #app {
@@ -96,12 +113,21 @@ p {
   }
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .mw-lg {
   max-width: 1280px;
 }
 
-.primary-shadow {
-  box-shadow: 0px 2px 4px 0px #00000014;
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .text-ellipsis {
