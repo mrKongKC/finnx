@@ -1,0 +1,146 @@
+@import './variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Kanit:wght@100;200;300;400;500;600;700;800&family=Play:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  min-height: 100vh;
+  font-family: 'Anuphan', sans-serif;
+  overflow: hidden;
+}
+
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+    
+  font-weight: 400;
+}
+
+#app {
+  height: 100dvh;
+}
+
+@each $size, $value in $size-list-fixed {
+  @if $size !=auto {
+    .fs-#{$size} {
+      font-size: $value;
+    }
+    @media (max-width: 960px) {
+      .fs-#{$size} {
+        font-size: calc($value - 3px);
+      }
+    }
+  }
+
+  .p-#{$size} {
+    padding: $value;
+  }
+
+  .pt-#{$size} {
+    padding-top: $value !important;
+  }
+
+  .pr-#{$size} {
+    padding-right: $value;
+  }
+
+  .pb-#{$size} {
+    padding-bottom: $value;
+  }
+
+  .pl-#{$size} {
+    padding-left: $value;
+  }
+
+  .m-#{$size} {
+    margin: $value;
+  }
+
+  .gap-#{$size} {
+    gap: $value;
+  }
+
+  .mx-#{$size} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  .mt-#{$size} {
+    margin-top: $value;
+  }
+
+  .mr-#{$size} {
+    margin-right: $value;
+  }
+
+  .mb-#{$size} {
+    margin-bottom: $value;
+  }
+
+  .ml-#{$size} {
+    margin-left: $value;
+  }
+}
+
+.mw-lg {
+  max-width: 1280px;
+}
+
+.primary-shadow {
+  box-shadow: 0px 2px 4px 0px #00000014;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.shake-animation {
+  animation: shake 0.3s;
+}
+
+.rotate-animation {
+  animation: rotate 1s infinite linear;
+}
