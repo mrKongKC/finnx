@@ -1,20 +1,16 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Header from './components/layout/MainHeader.vue'
+</script>
 
 <template>
-  <header class="flex-center justify-center">
-    <div class="wrapper mw-lg w-100">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <div class="primary-shadow blue-bg">
-          <p class="grey-wolf-color">test</p>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <main>
+  <Header></Header>
+  <main class="flex justify-center main-height">
     <RouterView />
   </main>
 </template>
-
-<style lang="scss" scoped></style>
+<style scoped>
+.main-height {
+  height: calc(100dvh - 131px);
+  overflow: auto;
+}
+</style>
