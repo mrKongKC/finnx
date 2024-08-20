@@ -1,5 +1,7 @@
 $size-tablet: 960px;
 $size-mobile: 600px;
+$size-xl: 1920px;
+$size-lg: 1280px;
 
 // xs: 0px (extra small devices)
 // sm: 600px (small devices)
@@ -7,28 +9,27 @@ $size-mobile: 600px;
 // lg: 1280px (large devices)
 // xl: 1920px (extra large devices)
 
-$black:#000000;
-$grey: #8B8B8B;
-$grey-wolf: #C7C7C7;
+$black: #000000;
+$grey: #8b8b8b;
+$grey-wolf: #c7c7c7;
 
-$polar-bear: #F0F0F0;
-$white:#FFFFFF;
-$caramel: #FFEEDB;
-$vannila:#FFF6EC;
-$cheesecake: #FFEDED;
-$sweets:#FFD8CC;
+$polar-bear: #f0f0f0;
+$white: #ffffff;
+$caramel: #ffeedb;
+$vannila: #fff6ec;
+$cheesecake: #ffeded;
+$sweets: #ffd8cc;
 
-$blue: #4C71F1;
-$blue-m: #AFD4FF;
-$blue-l: #DEEDFF;
+$blue: #4c71f1;
+$blue-m: #afd4ff;
+$blue-l: #deedff;
 
-$green:#00AF70;
-$green-l:#D1FFEF;
+$green: #00af70;
+$green-l: #d1ffef;
 
-$red:#F34336;
-$sherbet: #ED6238;
-$pumpkin: #FF9D2B;
-
+$red: #f34336;
+$sherbet: #ed6238;
+$pumpkin: #ff9d2b;
 
 $size-list-fixed: (
   auto: auto,

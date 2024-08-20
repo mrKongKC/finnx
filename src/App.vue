@@ -12,5 +12,6 @@ import Header from './components/layout/MainHeader.vue'
 .main-height {
   height: calc(100dvh - 131px);
   overflow: auto;
+  overflow-x: hidden;
 }
 </style>
