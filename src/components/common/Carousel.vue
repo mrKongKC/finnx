@@ -13,36 +13,47 @@ defineProps<{
 </script>
 
 <template>
-  <div class="custom-h-500 card-blue-l">
-    <ol class="stepper">
-      <li
-        v-for="(step, index) in items"
-        :key="step.title"
-        :class="{ active: index == 0 }"
-        class="step-container"
-      >
-        <div class="group-inside">
-          <img :src="step.iconStep" width="28px" />
-          <p>{{ step.title }}</p>
-        </div>
-      </li>
-    </ol>
+  <div class="custom-h-450 relative card-blue-l">
+    <div class="flex justify-center">
+      <div class="w-70">
+        <ol class="stepper">
+          <li
+            v-for="(step, index) in items"
+            :key="step.title"
+            :class="{ active: index == 2 }"
+            class="step-container"
+          >
+            <div class="group-inside">
+              <img :src="step.iconStep" width="28px" />
+            </div>
+            <p class="font-600">{{ step.title }}</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div
+      class="w-70 absolute"
+      style="height: 300px; bottom: -29%; left: 50%; transform: translate(-50%, -50%)"
+    >
+      <img :src="items[0].image" class="responsive-image" />
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/variable.scss';
+.w-70 {
+  max-width: 70%;
+  width: 100%;
+}
 
-.custom-h-500 {
-  height: 500px;
+.custom-h-450 {
+  height: 450px;
 }
 
 .step-container,
 .active.step-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   .group-inside {
     display: flex;
     align-items: center;
@@ -52,6 +63,11 @@ defineProps<{
     position: absolute;
     z-index: 99;
     color: $blue;
+    bottom: 42px;
+  }
+
+  p {
+    color: $black;
   }
 }
 
@@ -60,14 +76,14 @@ defineProps<{
     img {
       filter: brightness(0) invert(1);
     }
-    p {
-      color: $white;
-    }
+  }
+  p {
+    color: $blue;
   }
 }
 
 ol.stepper {
-  --circle: 4.5em;
+  --circle: 3em;
   --h: 5px;
 
   display: flex;

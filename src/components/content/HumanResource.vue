@@ -22,7 +22,7 @@ import Carousel from '../common/Carousel.vue'
       {{ locale.human_resource.second_title }}
     </h1>
     <div class="grid-container-content-1">
-      <div class="card custom-h-500">
+      <div class="card custom-h-450">
         <div class="flex-column-center gap-16">
           <h2 class="sherbet-color display-2 text-left w-100">
             {{ locale.human_resource.first_sub_title }}
@@ -54,8 +54,8 @@ import Carousel from '../common/Carousel.vue'
   max-width: 550px;
 }
 
-.custom-h-500 {
-  height: 500px;
+.custom-h-450 {
+  height: 450px;
 }
 
 .grid-container-content-1 {
@@ -64,7 +64,7 @@ import Carousel from '../common/Carousel.vue'
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  grid-template-columns: calc(30% - 10px) calc(70% - 10px);
+  grid-template-columns: calc(37% - 10px) calc(63% - 10px);
 
   .grid-item-1 {
     display: flex;
