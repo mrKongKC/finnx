@@ -3,7 +3,7 @@
         "menu": "เมนู",
         "sign_in": "เข้าสู่ระบบ",
         "start": "เริ่มต้นใช้งาน",
-        "detail":"ดูรายละเอียด"
+        "detail": "ดูรายละเอียด"
     },
     "header": {
         "menu": "เมนู",
@@ -15,9 +15,34 @@
         "article": "บทความ",
         "contact": "ติดต่อเรา"
     },
-    "first_content": {
-        "divider":"บริษัทที่ใช้งานผ่านวันนี้ลา",
+    "online_leave": {
+        "divider": "บริษัทที่ใช้งานผ่านวันนี้ลา",
         "title": "<H1>แอปลางานออนไลน์ผ่าน LINE OA",
         "sub_title": "แจ้งและอนุมัติวันลาออนไลน์ ใช้งานง่าย ผ่าน LINE OA ไม่ต้องติดตั้งแอปเพิ่ม"
+    },
+    "human_resource": {
+        "overview": "ภาพรวมของ Vannila",
+        "first_title": "<H2>โปรแกรม HR บริหารงานบุคคลใช้ง่าย ใช้งานผ่าน LINE OA",
+        "second_title": "<H2>จุดเด่น และรายละเอียดแต่ละเมนู",
+        "first_sub_title": "<H3>Leave Request & Management",
+        "manage_leave_day": "จัดการวันลา และแจ้งวันลาออนไลน์ผ่าน LINE OA",
+        "manage_leave_day_detail": "ระบบวันลาออนไลน์ ่ส่งคำขอวันลาทาง LINE OA และอนุมัติวันลาจากที่ใดก็ได้ ยังสามารถจัดการวันลา และประเภทต่างๆ ได้อย่างอิสระ",
+        "benefits": {
+            "line_notice": "แจ้งวันลาออนไลน์ ผ่าน LINE OA",
+            "approval_leave": "อนุมัติวันลาออนไลน์",
+            "department": "จัดการแผนกต่างๆ",
+            "team_member": "จัดการข้อมูลเพื่อนร่วมงาน",
+            "schedule": "จัดการวันหยุด และปฏิทินวันหยุด"
+        },
+        "leve_request": {
+            "notice": "แจ้งวันลา",
+            "approve": "อนุมัติวันลา",
+            "assign": "กำหนดวันลา"
+        },
+        "carousel_steps": {
+            "notice": "แจ้งวันลา",
+            "approve": "อนุมัติวันลา",
+            "vacation": "พักร้อน"
+        }
     }
 }

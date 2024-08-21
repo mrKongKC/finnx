@@ -2,11 +2,11 @@
 import locale from '../../config/locale.json'
 </script>
 <template>
-  <div class="card ml-24 mr-24">
+  <div class="card mr-24 ml-24">
     <div class="grid-container">
       <div class="grid-item">
-        <h1 class="sherbet-color display-1 mb-12">{{ locale.first_content.title }}</h1>
-        <h3 class="black-color display-3 mb-12">{{ locale.first_content.sub_title }}</h3>
+        <h1 class="sherbet-color display-1 mb-12">{{ locale.online_leave.title }}</h1>
+        <h3 class="black-color display-3 mb-12">{{ locale.online_leave.sub_title }}</h3>
         <div class="flex-column-start gap-12">
           <button class="secondary-btn w-80">{{ locale.common.detail }}</button>
           <button class="primary-btn w-80">{{ locale.common.start }}</button>
@@ -26,24 +26,19 @@ import locale from '../../config/locale.json'
 .grid-container {
   display: grid;
   padding: 20px;
-  align-items: center;
+  align-items: flex-start;
   grid-template-columns: 40% 60%;
 }
 
-.grid-item {
+.grid-item:first-child {
   text-align: left;
   width: 90%;
+  margin-top: 50px;
 }
 
 .grid-item:last-child {
   height: 100%;
   width: 100%;
   overflow: hidden;
-
-  .responsive-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
 }
 </style>

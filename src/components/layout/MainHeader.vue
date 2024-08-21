@@ -9,9 +9,9 @@ const currentPath = (path: string) => {
 }
 </script>
 <template>
-  <header class="flex-center justify-center p-24">
+  <header class="flex-center justify-center pt-24 pb-24">
     <div class="wrapper mw-lg w-100">
-      <nav class="header-nav-layout">
+      <nav class="header-nav-layout ml-24">
         <img src="../../assets/logo.svg" alt="logo-finnx" class="mr-4" />
         <RouterLink
           v-for="header in headerRouter"
@@ -27,11 +27,11 @@ const currentPath = (path: string) => {
           </h3>
         </RouterLink>
       </nav>
-      <div class="header-btn-layout-lg">
+      <div class="header-btn-layout-lg mr-24">
         <button class="secondary-btn">{{ locale.header.sign_in }}</button>
         <button class="primary-btn">{{ locale.header.start }}</button>
       </div>
-      <div class="header-btn-layout-sm">
+      <div class="header-btn-layout-sm mr-24">
         <button class="secondary-btn">{{ locale.header.menu }}</button>
       </div>
     </div>
