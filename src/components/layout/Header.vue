@@ -27,12 +27,10 @@ const currentPath = (path: string) => {
           </h3>
         </RouterLink>
       </nav>
-      <div class="header-btn-layout-lg mr-24">
-        <button class="secondary-btn">{{ locale.header.sign_in }}</button>
-        <button class="primary-btn">{{ locale.header.start }}</button>
-      </div>
-      <div class="header-btn-layout-sm mr-24">
-        <button class="secondary-btn">{{ locale.header.menu }}</button>
+      <div class="header-btn-layout mr-24">
+        <button class="secondary-btn menu-btn">{{ locale.header.menu }}</button>
+        <button class="secondary-btn operate-btn">{{ locale.header.sign_in }}</button>
+        <button class="primary-btn operate-btn">{{ locale.header.start }}</button>
       </div>
     </div>
   </header>
@@ -54,7 +52,7 @@ const currentPath = (path: string) => {
     .header-router-link {
       text-decoration: none;
 
-      @media (max-width: $size-mobile) {
+      @media (max-width: $size-tablet) {
         display: none;
       }
     }
@@ -67,20 +65,23 @@ const currentPath = (path: string) => {
     }
   }
 
-  .header-btn-layout-lg {
+  .header-btn-layout {
     display: flex;
     align-items: center;
     gap: 12px;
+  }
+
+  .operate-btn {
+    display: block;
     @media (max-width: $size-mobile) {
       display: none;
     }
   }
 
-  .header-btn-layout-sm {
+  .menu-btn {
     display: none;
-    align-items: center;
-    @media (max-width: $size-mobile) {
-      display: flex;
+    @media (max-width: $size-tablet) {
+      display: block;
     }
   }
 }

@@ -40,3 +40,4 @@ export const carouselSteps = [
     { title: locale.human_resource.carousel_steps.approve, image: carouselScStep, iconStep: carouselScIcon },
     { title: locale.human_resource.carousel_steps.vacation, image: carouselTdStep, iconStep: carouselTdIcon },
 ]
+

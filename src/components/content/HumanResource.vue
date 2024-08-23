@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import locale from '@/config/locale.json'
-import { hrContent, leaveRequest, carouselSteps } from '@/config/masterData'
-import Icon from '@/components/common/Icon.vue'
-import Carousel from '../common/Carousel.vue'
+import { hrContent, leaveRequest, carouselSteps } from '../../config/masterData'
+import Icon from '../../components/common/Icon.vue'
+import Carousel from '../../components/common/Carousel.vue'
 </script>
 <template>
   <div class="flex-column-center gap-32 mr-24 ml-24">
@@ -22,8 +22,8 @@ import Carousel from '../common/Carousel.vue'
       {{ locale.human_resource.second_title }}
     </h1>
     <div class="grid-container-content-1">
-      <div class="card custom-h-450">
-        <div class="flex-column-center gap-16">
+      <div class="card custom-h-450-left">
+        <div class="flex-column-center custom-gap-16">
           <h2 class="sherbet-color display-2 text-left w-100">
             {{ locale.human_resource.first_sub_title }}
           </h2>
@@ -39,7 +39,7 @@ import Carousel from '../common/Carousel.vue'
               v-for="content in leaveRequest"
               :key="content.title"
             >
-              <Icon :icon="content.icon" :img-size="35" />
+              <Icon :icon="content.icon" :img-size="35" :padding="22" />
               <p class="font-600 text-center">{{ content.title }}</p>
             </div>
           </div>
@@ -50,19 +50,34 @@ import Carousel from '../common/Carousel.vue'
   </div>
 </template>
 <style scoped lang="scss">
+@import '@/assets/variable.scss';
+
 .mw-550 {
   max-width: 550px;
 }
 
-.custom-h-450 {
+.custom-h-450,
+.custom-h-450-left {
   height: 450px;
+}
+
+.custom-h-450-left {
+  @media (max-width: $size-tablet) {
+    height: auto;
+  }
+}
+
+.custom-gap-16 {
+  gap: 38px;
+  @media (max-width: $size-tablet) {
+    gap: 16px;
+  }
 }
 
 .grid-container-content-1 {
   display: grid;
-  gap: 20px;
-  width: 100%;
   justify-content: space-between;
+  gap: 20px;
   align-items: center;
   grid-template-columns: calc(37% - 10px) calc(63% - 10px);
 
@@ -79,6 +94,38 @@ import Carousel from '../common/Carousel.vue'
       flex-direction: column;
       align-items: center;
       gap: 12px;
+    }
+  }
+
+  @media (max-width: $size-tablet) {
+    grid-template-columns: 1fr;
+
+    .grid-item-1 {
+      justify-content: space-around;
+      gap: 4px;
+    }
+  }
+
+  @media (max-width: $size-mobile) {
+    .grid-item-1 {
+      gap: 4px;
+    }
+  }
+
+  @media (max-width: $size-sm) {
+    .grid-item-1 {
+      flex-direction: column;
+      gap: 12px;
+
+      .grid-item-1__icon-content {
+        display: flex;
+        max-width: initial;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+      }
     }
   }
 }
@@ -101,6 +148,15 @@ import Carousel from '../common/Carousel.vue'
       flex-direction: column;
       align-items: center;
       gap: 12px;
+    }
+  }
+
+  @media (max-width: $size-mobile) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+
+    .grid-item:last-child {
+      grid-column: span 2;
     }
   }
 }

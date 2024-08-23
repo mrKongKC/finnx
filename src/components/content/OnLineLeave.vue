@@ -8,8 +8,8 @@ import locale from '../../config/locale.json'
         <h1 class="sherbet-color display-1 mb-12">{{ locale.online_leave.title }}</h1>
         <h3 class="black-color display-3 mb-12">{{ locale.online_leave.sub_title }}</h3>
         <div class="flex-column-start gap-12">
-          <button class="secondary-btn w-80">{{ locale.common.detail }}</button>
-          <button class="primary-btn w-80">{{ locale.common.start }}</button>
+          <button class="secondary-btn custom-w">{{ locale.common.detail }}</button>
+          <button class="primary-btn custom-w">{{ locale.common.start }}</button>
         </div>
       </div>
       <div class="grid-item">
@@ -19,7 +19,8 @@ import locale from '../../config/locale.json'
   </div>
 </template>
 <style scoped lang="scss">
-.w-80 {
+@import '@/assets/variable.scss';
+.custom-w {
   width: 80%;
 }
 
@@ -28,6 +29,23 @@ import locale from '../../config/locale.json'
   padding: 20px;
   align-items: flex-start;
   grid-template-columns: 40% 60%;
+
+  @media (max-width: $size-tablet) {
+    grid-template-columns: 1fr;
+    .grid-item:first-child {
+      order: 2;
+      width: 100%;
+      text-align: center;
+
+      .custom-w {
+        width: 100%;
+      }
+    }
+
+    .grid-item:last-child {
+      order: 1;
+    }
+  }
 }
 
 .grid-item:first-child {

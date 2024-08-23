@@ -47,11 +47,11 @@ p {
   font-size: 12px;
 }
 
-.relative{
+.relative {
   position: relative;
 }
 
-.absolute{
+.absolute {
   position: absolute;
 }
 
@@ -161,7 +161,8 @@ p {
 
 .btn,
 .primary-btn,
-.secondary-btn {
+.secondary-btn,
+.primary-btn-circle {
   cursor: pointer;
   font-weight: 600;
   border-radius: 6px;
@@ -169,7 +170,8 @@ p {
   border: 0px;
 }
 
-.primary-btn {
+.primary-btn,
+.primary-btn-circle {
   color: $white;
   background-color: $blue;
 
@@ -177,6 +179,14 @@ p {
     background-color: #304592;
     transition: all 0.3s ease-in-out;
   }
+}
+
+.primary-btn-circle {
+  border-radius: 50%;
+  padding: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .secondary-btn {
@@ -235,24 +245,6 @@ p {
   text-overflow: ellipsis;
 }
 
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-5px);
-  }
-  50% {
-    transform: translateX(5px);
-  }
-  75% {
-    transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -262,10 +254,19 @@ p {
   }
 }
 
-.shake-animation {
-  animation: shake 0.3s;
+@keyframes pop-hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .rotate-animation {
   animation: rotate 1s infinite linear;
+}
+
+.pop-hide-animation {
+  animation: pop-hide 1s ease-in-out;
 }

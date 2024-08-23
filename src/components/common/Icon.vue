@@ -5,14 +5,16 @@ withDefaults(
   defineProps<{
     icon: string
     imgSize: number
+    padding?: number
   }>(),
   {
-    imgSize: 40
+    imgSize: 40,
+    padding: 24
   }
 )
 </script>
 <template>
-  <div class="icon-container blue-bg" :style="{ width: `${imgSize}px` }">
+  <div class="icon-container blue-bg" :style="{ width: `${imgSize}px`, padding: `${padding}px` }">
     <img :src="icon" alt="ref-icon" class="responsive-image" />
   </div>
 </template>
@@ -22,6 +24,5 @@ withDefaults(
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  padding: 24px;
 }
 </style>
