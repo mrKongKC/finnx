@@ -13,12 +13,22 @@ import carouselTdStep from "@/assets/img/step-leave3.png";
 import carouselFsIcon from "@/assets/img/small-notice-leave.svg";
 import carouselScIcon from "@/assets/img/small-approve.svg";
 import carouselTdIcon from "@/assets/img/small-vacation.svg";
-
 import clockIcon from "@/assets/img/clock-icon.svg";
 import editIcon from "@/assets/img/edit-icon.svg";
 import historyIcon from "@/assets/img/history-icon.svg";
 import userIcon from "@/assets/img/user-icon.svg";
 import permissionIcon from "@/assets/img/permission-icon.svg";
+import tabFsStep from "@/assets/img/tab-1.png";
+import tabScStep from "@/assets/img/tab-2.png";
+import tabTdStep from "@/assets/img/tab-3.png";
+
+import tabActiveFsIcon from "@/assets/img/tab-1-active.svg";
+import tabActiveScIcon from "@/assets/img/tab-2-active.svg";
+import tabActiveTdIcon from "@/assets/img/tab-3-active.svg";
+import tabFsIcon from "@/assets/img/tab-1-non.svg";
+import tabScIcon from "@/assets/img/tab-2-non.svg";
+import tabTdIcon from "@/assets/img/tab-3-non.svg";
+
 
 export const headerRouter = [
     { title: locale.header.home, path: '/' },
@@ -63,6 +73,12 @@ export const employeeData = [
             { title: locale.human_resource.employee.employee_management.permission, icon: permissionIcon },]
     }
 
+]
+
+export const tabs = [
+    { title: locale.human_resource.tabs.manage, image: tabFsStep, iconA: tabActiveFsIcon, icon: tabFsIcon },
+    { title: locale.human_resource.tabs.edit, image: tabScStep, iconA: tabActiveScIcon, icon: tabScIcon },
+    { title: locale.human_resource.tabs.move, image: tabTdStep, iconA: tabActiveTdIcon, icon: tabTdIcon },
 ]
 
 

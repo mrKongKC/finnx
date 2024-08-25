@@ -130,7 +130,7 @@ watch(currentIndex, (newVal, oldVale) => {
 
     &:hover {
       background: $blue;
-      transition: all 0.2s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
   }
 
