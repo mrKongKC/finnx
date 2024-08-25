@@ -20,8 +20,17 @@ defineProps<{
   align-items: center;
   gap: 20px;
   justify-content: flex-start;
+  height: 100px;
 
   @media (min-width: $size-xl) {
+    max-width: 1280px;
+  }
+
+  @media (max-width: $size-mobile) {
+    max-width: 1280px;
+  }
+
+  @media (max-width: $size-tablet) {
     max-width: 1280px;
   }
 }
@@ -39,15 +48,36 @@ defineProps<{
 }
 
 @media (max-width: $size-tablet) {
+  .box:nth-child(1),
   .box:nth-child(3),
+  .box:nth-child(4),
   .box:nth-child(5),
-  .box:nth-child(4) {
+  .box:nth-child(6),
+  .box:nth-child(7) {
     display: none;
   }
 }
 
 @media (max-width: $size-mobile) {
-  .box:nth-child(6) {
+  .box:nth-child(2) {
+    width: 80px;
+  }
+
+  .box:nth-child(9) {
+    width: 140px;
+  }
+
+  .box:nth-child(1),
+  .box:nth-child(6),
+  .box:nth-child(7),
+  .box:nth-child(8) {
+    display: none;
+  }
+}
+
+@media (max-width: $size-sm) {
+  .box:nth-child(2),
+  .box:nth-child(9) {
     display: none;
   }
 }

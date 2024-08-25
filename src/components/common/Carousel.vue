@@ -182,7 +182,7 @@ watch(currentIndex, (newVal, oldVale) => {
     position: absolute;
     z-index: 99;
     color: $blue;
-    bottom: 42px;
+    bottom: 45px;
   }
 }
 
