@@ -1,6 +1,4 @@
 import './assets/style.scss'
-import 'vue-slider-component/theme/default.css'
-
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 

@@ -43,6 +43,23 @@
             "notice": "แจ้งวันลา",
             "approve": "อนุมัติวันลา",
             "vacation": "พักร้อน!"
+        },
+        "employee": {
+            "first_title": "ตรวจสอบวันลาผ่านหน้าโปรไฟล์",
+            "second_title": "<H3>Employee’s Profile",
+            "sub_title_profile": "หน้าโปรไฟล์ส่วนตัว เลือกดูจำนวนวันลาคงเหลือ แยกตามประเภทต่างๆ และดูประวัติการทำงานของบริษัท ได้ตลอดเวลาผ่าน LINE OA",
+            "third_title": "<H3>Employee’s Management",
+            "sub_title_management":"จัดการ แก้ไขข้อมูลเพื่อนร่วมงาน กำหนดสิทธิ์ในการใช้งานของระบบ HR ",
+            "manage_permission": "กำหนดระดับสิทธิ์ใช้งาน",
+            "employee_profile": {
+                "remainder": "วันลาคงเหลือ",
+                "profile":"โปรไฟล์ส่วนตัว",
+                "history":"ประวัติการทำงาน"
+            },
+            "employee_management": {
+                "edit": "แก้ไขข้อมูล",
+                "permission": "ระดับสิทธิ์การใช้งาน"
+            }
         }
     }
 }

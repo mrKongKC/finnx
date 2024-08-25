@@ -62,6 +62,7 @@ watch(currentIndex, (newVal, oldVale) => {
     </div>
     <div class="custom-w-70 absolute img-display-layout">
       <img
+        :alt="items[currentIndex].image"
         :src="items[currentIndex].image"
         class="responsive-image"
         :class="{ 'pop-hide-animation': activeAnimation }"

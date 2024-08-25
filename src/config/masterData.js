@@ -14,6 +14,12 @@ import carouselFsIcon from "@/assets/img/small-notice-leave.svg";
 import carouselScIcon from "@/assets/img/small-approve.svg";
 import carouselTdIcon from "@/assets/img/small-vacation.svg";
 
+import clockIcon from "@/assets/img/clock-icon.svg";
+import editIcon from "@/assets/img/edit-icon.svg";
+import historyIcon from "@/assets/img/history-icon.svg";
+import userIcon from "@/assets/img/user-icon.svg";
+import permissionIcon from "@/assets/img/permission-icon.svg";
+
 export const headerRouter = [
     { title: locale.header.home, path: '/' },
     { title: locale.header.price, path: '/price' },
@@ -40,4 +46,24 @@ export const carouselSteps = [
     { title: locale.human_resource.carousel_steps.approve, image: carouselScStep, iconStep: carouselScIcon },
     { title: locale.human_resource.carousel_steps.vacation, image: carouselTdStep, iconStep: carouselTdIcon },
 ]
+
+export const employeeData = [
+    {
+        title: locale.human_resource.employee.second_title,
+        subTitle: locale.human_resource.employee.sub_title_profile,
+        icon: [{ title: locale.human_resource.employee.employee_profile.remainder, icon: clockIcon, },
+        { title: locale.human_resource.employee.employee_profile.profile, icon: userIcon, },
+        { title: locale.human_resource.employee.employee_profile.history, icon: historyIcon },]
+    },
+    {
+        title: locale.human_resource.employee.third_title,
+        subTitle: locale.human_resource.employee.sub_title_management,
+        icon: [
+            { title: locale.human_resource.employee.employee_management.edit, icon: editIcon },
+            { title: locale.human_resource.employee.employee_management.permission, icon: permissionIcon },]
+    }
+
+]
+
+
 

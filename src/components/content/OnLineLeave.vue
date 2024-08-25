@@ -5,9 +5,9 @@ import locale from '../../config/locale.json'
   <div class="card mr-24 ml-24">
     <div class="grid-container">
       <div class="grid-item">
-        <h1 class="sherbet-color display-1 mb-12">{{ locale.online_leave.title }}</h1>
-        <h3 class="black-color display-3 mb-12">{{ locale.online_leave.sub_title }}</h3>
-        <div class="flex-column-start gap-12">
+        <h1 class="sherbet-color display-1">{{ locale.online_leave.title }}</h1>
+        <h3 class="black-color display-3 mt-24">{{ locale.online_leave.sub_title }}</h3>
+        <div class="flex-column-start gap-12 mt-24">
           <button class="secondary-btn custom-w">{{ locale.common.detail }}</button>
           <button class="primary-btn custom-w">{{ locale.common.start }}</button>
         </div>
