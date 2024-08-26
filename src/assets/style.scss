@@ -73,6 +73,29 @@ p {
   height: 100dvh;
 }
 
+.custom-slider {
+  .vue-slider-dot-handle {
+    background-color: $blue;
+    border: 6px solid $white;
+  }
+
+  .vue-slider-dot-tooltip-bottom {
+    bottom: -4px;
+  }
+
+  .vue-slider-dot-handle-focus {
+    box-shadow: 0.5px 0.5px 2px 1px #00000052 !important;
+  }
+
+  .vue-slider-rail {
+    background-color: $blue-l;
+  }
+
+  .vue-slider-process {
+    background-color: $blue;
+  }
+}
+
 @each $size, $value in $size-list-fixed {
   @if $size !=auto {
     .fs-#{$size} {
@@ -166,7 +189,7 @@ p {
   cursor: pointer;
   font-weight: 600;
   border-radius: 6px;
-  padding: 10px 28px;
+  padding: 12px 28px;
   border: 0px;
 }
 
@@ -220,6 +243,11 @@ p {
   align-items: center;
 }
 
+.flex-end{
+  display: flex;
+  align-items: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -237,6 +265,14 @@ p {
 
 .flex-column-start {
   align-items: start;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.no-wrap{
+  white-space: nowrap;
 }
 
 .text-ellipsis {
@@ -269,4 +305,16 @@ p {
 
 .pop-hide-animation {
   animation: pop-hide 1s ease-in-out;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.line-through {
+  text-decoration: line-through;
 }
