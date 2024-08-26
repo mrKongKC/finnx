@@ -1,5 +1,6 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import locale from '../../config/locale.json'
+import locale from '@/config/locale.json'
 </script>
 <template>
   <div class="card mr-24 ml-24">
@@ -13,7 +14,7 @@ import locale from '../../config/locale.json'
         </div>
       </div>
       <div class="grid-item">
-        <img src="../../assets/img/content-1.png" alt="content-1" class="responsive-image" />
+        <img src="@/assets/img/content-1.png" alt="content-1" class="responsive-image" />
       </div>
     </div>
   </div>

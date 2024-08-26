@@ -1,7 +1,8 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import { headerRouter } from '../../config/masterData'
+import { headerRouter } from '@/config/masterData'
 import { useRoute } from 'vue-router'
-import locale from '../../config/locale.json'
+import locale from '@/config/locale.json'
 
 const currentPath = (path: string) => {
   const route = useRoute()
@@ -12,7 +13,7 @@ const currentPath = (path: string) => {
   <header class="flex-center justify-center pt-24 pb-24">
     <div class="wrapper mw-lg w-100">
       <nav class="header-nav-layout ml-24">
-        <img src="../../assets/logo.svg" alt="logo-finnx" class="mr-4" />
+        <img src="@/assets/logo.svg" alt="logo-finnx" class="mr-4" />
         <RouterLink
           v-for="header in headerRouter"
           :to="header.path"

@@ -1,10 +1,11 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import locale from '@/config/locale.json'
-import { hrContent, leaveRequest, carouselSteps } from '../../config/masterData'
-import Icon from '../../components/common/Icon.vue'
-import Carousel from '../../components/common/Carousel.vue'
-import Employee from '../../components/content/Employee.vue'
-import Department from '../../components/content/Department.vue'
+import { hrContent, leaveRequest, carouselSteps } from '@/config/masterData'
+import Icon from '@/components/common/Icon.vue'
+import Carousel from '@/components/common/Carousel.vue'
+import Employee from '@/components/content/Employee.vue'
+import Department from '@/components/content/Department.vue'
 </script>
 <template>
   <div class="flex-column-center gap-32 mr-24 ml-24">
@@ -124,7 +125,7 @@ import Department from '../../components/content/Department.vue'
   .grid-item-1 {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
+    gap: 24px;
     align-items: center;
     width: 100%;
 
@@ -142,7 +143,7 @@ import Department from '../../components/content/Department.vue'
 
     .grid-item-1 {
       justify-content: space-around;
-      gap: 4px;
+      gap: 24px;
     }
   }
 

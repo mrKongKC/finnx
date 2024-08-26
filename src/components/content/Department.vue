@@ -1,8 +1,9 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import locale from '@/config/locale.json'
-import { tabs } from '../../config/masterData'
-import Icon from '../../components/common/Icon.vue'
-import Tab from '../../components/common/Tab.vue'
+import { tabs } from '@/config/masterData'
+import Icon from '@/components/common/Icon.vue'
+import Tab from '@/components/common/Tab.vue'
 </script>
 
 <template>
@@ -36,18 +37,17 @@ import Tab from '../../components/common/Tab.vue'
   display: grid;
   grid-template-columns: calc(40% - 20px) calc(60% - 20px);
   gap: 40px;
-  padding: 20px;
+  // padding: 20px;
   align-items: flex-start;
 
   .grid-item-3 {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
-    align-items: center;
+    gap: 24px;
     width: 100%;
 
     .grid-item-3__icon-content {
-      max-width: 120px;
+      max-width: 140px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -60,15 +60,10 @@ import Tab from '../../components/common/Tab.vue'
 
     .grid-item-3 {
       justify-content: space-around;
-      gap: 4px;
+      gap: 24px;
     }
   }
 
-  @media (max-width: $size-mobile) {
-    .grid-item-3 {
-      gap: 4px;
-    }
-  }
 
   @media (max-width: $size-sm) {
     .grid-item-3 {

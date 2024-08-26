@@ -1,7 +1,8 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script lang="ts" setup>
 import locale from '@/config/locale.json'
-import { employeeData } from '../../config/masterData.js'
-import Icon from '../../components/common/Icon.vue'
+import { employeeData } from '@/config/masterData.js'
+import Icon from '@/components/common/Icon.vue'
 </script>
 <template>
   <div class="grid-container-content-2">
@@ -15,7 +16,7 @@ import Icon from '../../components/common/Icon.vue'
           </div>
           <div class="absolute card-content-1-img-layout">
             <img
-              src="../../assets/img/leave-profile-1.png"
+              src="@/assets/img/leave-profile-1.png"
               alt="leave-profile-1"
               class="responsive-image"
             />
@@ -28,7 +29,7 @@ import Icon from '../../components/common/Icon.vue'
             </h3>
             <div class="card-content-2-img-layout">
               <img
-                src="../../assets/img/content-employee-profile.png"
+                src="@/assets/img/content-employee-profile.png"
                 alt="content-employee-profile"
                 class="responsive-image"
               />
@@ -71,7 +72,7 @@ import Icon from '../../components/common/Icon.vue'
           </h3>
           <div class="card-content-2-img-layout">
             <img
-              src="../../assets/img/content-employee-profile.png"
+              src="@/assets/img/content-employee-profile.png"
               alt="content-employee-profile"
               class="responsive-image"
             />

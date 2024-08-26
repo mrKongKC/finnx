@@ -1,5 +1,6 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import { defineProps, computed, ref, watch } from 'vue'
+import { defineProps, ref, watch } from 'vue'
 
 interface ItemProps {
   title: string
@@ -52,17 +53,17 @@ watch(currentIndex, (newVal, oldVale) => {
     </div>
     <div class="left-icon-container">
       <button class="primary-btn-circle" @click="setIndex(currentIndex - 1)">
-        <img src="../../assets/img/arrow-left-solid.svg" />
+        <img src="@/assets/img/arrow-left-solid.svg" />
       </button>
     </div>
     <div class="right-icon-container">
       <button class="primary-btn-circle" @click="setIndex(currentIndex + 1)">
-        <img src="../../assets/img/arrow-right-solid.svg" />
+        <img src="@/assets/img/arrow-right-solid.svg" />
       </button>
     </div>
     <div class="custom-w-70 absolute img-display-layout">
       <img
-        :alt="items[currentIndex].image"
+        :alt="items[currentIndex]?.title"
         :src="items[currentIndex].image"
         class="responsive-image"
         :class="{ 'pop-hide-animation': activeAnimation }"

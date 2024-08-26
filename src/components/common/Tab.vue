@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { defineProps, ref } from 'vue'
 
@@ -29,34 +30,26 @@ const setImgDefault = () => {
 </script>
 
 <template>
-  <div class="relative">
-    <div class="tabs-container">
-      <div class="nav">
-        <div
-          v-for="(item, index) in items"
-          :key="item.title"
-          class="text-center pl-12 pr-12 flex-center gap-12 pb-12 default-tab hover-tab"
-          :class="{ 'active-tab': currentIndex === index }"
-          @mouseenter="changeImg(index)"
-          @mouseleave="setImgDefault"
-          @click="activeTab(index)"
-        >
-          <img
-            :src="item.iconA"
-            width="24"
-            v-if="currentHover === index || currentIndex === index"
-          />
-          <img :src="item.icon" width="24" v-else />
-          <h3 class="diplay-3">{{ item.title }}</h3>
-        </div>
+  <div class="tabs-container relative">
+    <div class="nav">
+      <button
+        v-for="(item, index) in items"
+        :key="item.title"
+        class="text-center flex-center default-tab hover-tab"
+        :class="{ 'active-tab': currentIndex === index }"
+        @mouseenter="changeImg(index)"
+        @mouseleave="setImgDefault"
+        @click="activeTab(index)"
+      >
+        <img :src="item.iconA" width="24" v-if="currentHover === index || currentIndex === index" />
+        <img :src="item.icon" width="24" v-else />
+        <h3 class="diplay-3">{{ item.title }}</h3>
+      </button>
+    </div>
+    <div class="content" v-for="(item, index) in items" :key="index">
+      <div class="img-container pop-hide-animation" v-if="currentIndex === index">
+        <img :src="item.image" class="responsive-image" />
       </div>
-      <div class="content" v-for="(item, index) in items" :key="index">
-          <img
-            :src="item.image"
-            class="responsive-image pt-24 pop-hide-animation"
-            v-if="currentIndex === index"
-          />
-        </div>
     </div>
   </div>
 </template>
@@ -66,23 +59,33 @@ const setImgDefault = () => {
 
 .tabs-container {
   .active-tab {
-    color: $blue;
+    color: $blue !important;
     border-bottom: 3px solid $blue !important;
   }
 
   .nav {
     display: flex;
     justify-content: space-between;
-    gap: 12px;
 
     .default-tab {
+      border: 0px;
+      background: $white;
+      color: $black;
       border-bottom: 3px solid transparent;
+      padding: 0 12px 12px 12px;
+      gap: 12px;
+
+      @media (max-width: $size-mobile) {
+        padding: 0;
+        gap: 2px;
+        padding-bottom: 12px;
+      }
     }
 
     .hover-tab {
       cursor: pointer;
       &:hover {
-        color: $blue;
+        color: $blue !important;
         border-bottom: 3px solid $blue;
         transition: all 0.3s ease-in-out;
       }
@@ -90,7 +93,15 @@ const setImgDefault = () => {
   }
 
   .content {
-    width: 100%;
+    .img-container {
+      padding-top: 24px;
+      width: 100%;
+      height: 340px;
+
+      @media (max-width: $size-mobile) {
+        padding-top: 0px;
+      }
+    }
   }
 }
 </style>
