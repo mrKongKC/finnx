@@ -25,27 +25,21 @@ const handleAccordion = (selectedIndex: number) => {
 
 <template>
   <div class="card custom-card">
-    <article class="wrapper">
-      <div v-for="(question, index) in questions" :key="question.title" class="section w-100">
-        <button
-          :class="[
-            'panel w-100',
-            {
-              active: question.isExpanded
-            }
-          ]"
-          @click="() => handleAccordion(index)"
-        >
-          {{ question.title }}
-          {{ question.isExpanded }}
+    <h2 class="display-2 sherbet-color text-center">{{ locale.vannila_detail.question.title }}</h2>
+    <div class="grid-container mt-24">
+      <div v-for="(question, index) in questions" :key="question.title" class="w-100">
+        <button :class="['panel w-100']" @click="() => handleAccordion(index)">
+          <p class="font-600 black-color">{{ question.title }}</p>
+          <img src="@/assets/img/plus-icon.svg" alt="plus" v-show="!question.isExpanded" />
+          <img src="@/assets/img/minus-icon.svg" alt="minus" v-show="question.isExpanded" />
         </button>
         <Collapse as="section" :when="question.isExpanded">
-          <p class="CollapseContent">
+          <p class="collapse-content">
             {{ question.answer }}
           </p>
         </Collapse>
       </div>
-    </article>
+    </div>
   </div>
 </template>
 <style scoped lang="scss">
@@ -53,5 +47,30 @@ const handleAccordion = (selectedIndex: number) => {
 
 .custom-card {
   width: calc(100% - 64px);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 10px));
+  gap: 20px;
+  justify-content: space-between;
+
+  @media (max-width: $size-mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border: 0px;
+    border-bottom: 1px solid $grey-wolf;
+  }
+
+  .collapse-content {
+    padding: 8px;
+  }
 }
 </style>

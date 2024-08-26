@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import Header from '@/components/layout/Header.vue'
+
+const handleShowMenu = () => {
+  
+}
 </script>
 
 <template>
-  <Header></Header>
+  <Header @show-menu="handleShowMenu"></Header>
   <main class="flex justify-center main-height">
     <RouterView />
   </main>

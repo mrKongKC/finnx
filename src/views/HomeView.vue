@@ -3,6 +3,7 @@ import locale from '../config/locale.json'
 import OnlineLeave from '@/components/content/OnLineLeave.vue'
 import Divider from '@/components/content/Divider.vue'
 import Overview from '@/components/content/Overview.vue'
+import Footer from '@/components/layout/Footer.vue'
 </script>
 
 <template>
@@ -11,8 +12,11 @@ import Overview from '@/components/content/Overview.vue'
       <OnlineLeave />
     </div>
     <Divider :title="locale.online_leave.divider"></Divider>
-    <div class="mw-lg w-100 pb-24">
+    <div class="mw-lg w-100">
       <Overview />
+    </div>
+    <div class="mw-lg w-100 pb-24">
+      <Footer />
     </div>
   </div>
 </template>

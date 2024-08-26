@@ -63,9 +63,17 @@ const package_list = [
 
 export const headerRouter = [
     { title: locale.header.home, path: '/' },
+    { title: locale.header.high_light, path: '/high-light' },
     { title: locale.header.price, path: '/price' },
     { title: locale.header.article, path: '/article' },
     { title: locale.header.contact, path: '/contact' }
+]
+
+export const footerRouter = [
+    { title: locale.footer.cookie, path: '/' },
+    { title: locale.footer.policy, path: '/' },
+    { title: locale.footer.condition, path: '/' },
+    { title: locale.footer.personal, path: '/' },
 ]
 
 export const hrContent = [

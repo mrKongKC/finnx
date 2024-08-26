@@ -3,10 +3,18 @@
 import { headerRouter } from '@/config/masterData'
 import { useRoute } from 'vue-router'
 import locale from '@/config/locale.json'
+import { ref, defineEmits } from 'vue'
+const emits = defineEmits(['showMenu'])
+const showMenu = ref<boolean>(false)
 
 const currentPath = (path: string) => {
   const route = useRoute()
   return route.path === path
+}
+
+const handleShowMenu = () => {
+  showMenu.value = !showMenu.value
+  emits('showMenu', showMenu.value)
 }
 </script>
 <template>
@@ -18,7 +26,7 @@ const currentPath = (path: string) => {
           v-for="header in headerRouter"
           :to="header.path"
           :key="header.title"
-          class="header-router-link display-3"
+          class="header-router-link"
         >
           <h3
             class="display-3 black-color pointer hover-router-link"
@@ -29,7 +37,12 @@ const currentPath = (path: string) => {
         </RouterLink>
       </nav>
       <div class="header-btn-layout mr-24">
-        <button class="secondary-btn menu-btn">{{ locale.header.menu }}</button>
+        <button class="secondary-btn menu-btn" v-if="!showMenu" @click="handleShowMenu">
+          {{ locale.header.menu }}
+        </button>
+        <button class="close-btn" v-else @click="handleShowMenu">
+          <img src="@/assets/close-icon.svg" alt="close" />
+        </button>
         <button class="secondary-btn operate-btn">{{ locale.header.sign_in }}</button>
         <button class="primary-btn operate-btn">{{ locale.header.start }}</button>
       </div>
@@ -79,7 +92,13 @@ const currentPath = (path: string) => {
     }
   }
 
-  .menu-btn {
+  .close-btn {
+    border: 0px;
+    background-color: transparent;
+  }
+
+  .menu-btn,
+  .close-btn {
     display: none;
     @media (max-width: $size-tablet) {
       display: block;

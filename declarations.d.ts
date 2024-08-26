@@ -10,4 +10,5 @@ declare module '@/config/masterData' {
   export const hrContent: any
   export const leaveRequest: any
   export const carouselSteps: any
+  export const footerRouter: any
 }
