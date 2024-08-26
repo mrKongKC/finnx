@@ -2,7 +2,7 @@
 import locale from '../config/locale.json'
 import OnlineLeave from '@/components/content/OnLineLeave.vue'
 import Divider from '@/components/content/Divider.vue'
-import HR from '@/components/content/HumanResource.vue'
+import Overview from '@/components/content/Overview.vue'
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import HR from '@/components/content/HumanResource.vue'
     </div>
     <Divider :title="locale.online_leave.divider"></Divider>
     <div class="mw-lg w-100 pb-24">
-      <HR />
+      <Overview />
     </div>
   </div>
 </template>

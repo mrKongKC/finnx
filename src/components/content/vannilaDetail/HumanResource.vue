@@ -4,14 +4,12 @@ import locale from '@/config/locale.json'
 import { hrContent, leaveRequest, carouselSteps } from '@/config/masterData'
 import Icon from '@/components/common/Icon.vue'
 import Carousel from '@/components/common/Carousel.vue'
-import Employee from '@/components/content/Employee.vue'
-import Department from '@/components/content/Department.vue'
 </script>
 <template>
-  <div class="flex-column-center gap-32 mr-24 ml-24">
-    <p class="font-600">{{ locale.human_resource.overview }}</p>
+  <div class="flex-column-center gap-32">
+    <p class="font-600">{{ locale.vannila_detail.overview }}</p>
     <h1 class="sherbet-color display-1 mw-550 text-center">
-      {{ locale.human_resource.first_title }}
+      {{ locale.vannila_detail.first_title }}
     </h1>
     <div class="grid-container-icon mt-12">
       <div class="grid-item" v-for="content in hrContent" :key="content.title">
@@ -22,18 +20,18 @@ import Department from '@/components/content/Department.vue'
       </div>
     </div>
     <h1 class="sherbet-color display-1 mw-550 text-center mt-24">
-      {{ locale.human_resource.second_title }}
+      {{ locale.vannila_detail.second_title }}
     </h1>
     <div class="grid-container-content-1">
       <div class="card custom-h-450-left">
         <h2 class="sherbet-color display-2 text-left w-100">
-          {{ locale.human_resource.first_sub_title }}
+          {{ locale.vannila_detail.first_sub_title }}
         </h2>
         <p class="black-color font-600 text-left w-100 mt-24">
-          {{ locale.human_resource.manage_leave_day }}
+          {{ locale.vannila_detail.manage_leave_day }}
         </p>
         <p class="grey-color font-600 text-left mt-24">
-          {{ locale.human_resource.manage_leave_day_detail }}
+          {{ locale.vannila_detail.manage_leave_day_detail }}
         </p>
         <div class="grid-item-1 mt-36">
           <div
@@ -48,8 +46,6 @@ import Department from '@/components/content/Department.vue'
       </div>
       <Carousel :items="carouselSteps" />
     </div>
-    <Employee/>
-    <Department/>
   </div>
 </template>
 <style scoped lang="scss">

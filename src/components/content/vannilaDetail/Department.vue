@@ -10,12 +10,12 @@ import Tab from '@/components/common/Tab.vue'
   <div class="card">
     <div class="grid-container-content-3">
       <div class="grid-item">
-        <h2 class="sherbet-color display-2">{{ locale.human_resource.department.title }}</h2>
+        <h2 class="sherbet-color display-2">{{ locale.vannila_detail.department.title }}</h2>
         <p class="black-color font-600 text-left mt-24">
-          {{ locale.human_resource.department.first_sub_title }}
+          {{ locale.vannila_detail.department.first_sub_title }}
         </p>
         <p class="grey-color font-600 text-left mt-24">
-          {{ locale.human_resource.department.second_sub_title }}
+          {{ locale.vannila_detail.department.second_sub_title }}
         </p>
         <div class="mt-24 grid-item-3">
           <div class="grid-item-3__icon-content" v-for="content in tabs" :key="content.title">
@@ -25,7 +25,7 @@ import Tab from '@/components/common/Tab.vue'
         </div>
       </div>
       <div>
-        <Tab :items="tabs"/>
+        <Tab :items="tabs" />
       </div>
     </div>
   </div>
@@ -63,7 +63,6 @@ import Tab from '@/components/common/Tab.vue'
       gap: 24px;
     }
   }
-
 
   @media (max-width: $size-sm) {
     .grid-item-3 {

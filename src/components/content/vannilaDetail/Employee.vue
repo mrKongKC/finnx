@@ -11,7 +11,7 @@ import Icon from '@/components/common/Icon.vue'
         <div class="card relative">
           <div class="card-content-1">
             <h3 class="display-3 blue-color text-center">
-              {{ locale.human_resource.employee.first_title }}
+              {{ locale.vannila_detail.employee.first_title }}
             </h3>
           </div>
           <div class="absolute card-content-1-img-layout">
@@ -25,7 +25,7 @@ import Icon from '@/components/common/Icon.vue'
         <div class="card-blue-l responsive-card-content-1">
           <div class="relative card-content-2">
             <h3 class="display-3 blue-color text-center">
-              {{ locale.human_resource.employee.manage_permission }}
+              {{ locale.vannila_detail.employee.manage_permission }}
             </h3>
             <div class="card-content-2-img-layout">
               <img
@@ -68,7 +68,7 @@ import Icon from '@/components/common/Icon.vue'
       <div class="card-blue-l">
         <div class="relative card-content-2">
           <h3 class="display-3 blue-color text-center">
-            {{ locale.human_resource.employee.manage_permission }}
+            {{ locale.vannila_detail.employee.manage_permission }}
           </h3>
           <div class="card-content-2-img-layout">
             <img

@@ -1,0 +1,16 @@
+<!-- eslint-disable vue/multi-word-component-names -->
+<script setup lang="ts">
+import Employee from '@/components/content/vannilaDetail/Employee.vue'
+import Department from '@/components/content/vannilaDetail/Department.vue'
+import HumanResource from '@/components/content/vannilaDetail/HumanResource.vue'
+import Promotion from '@/components/content/vannilaDetail/Promotion.vue'
+</script>
+<template>
+  <div class="flex-column-center gap-32 mr-24 ml-24">
+    <HumanResource/>
+    <Employee/>
+    <Department/>
+    <Promotion/>
+  </div>
+</template>
+
