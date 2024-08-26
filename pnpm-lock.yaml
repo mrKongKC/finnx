@@ -17,6 +17,9 @@ importers:
       vue-3-slider-component:
         specifier: ^1.0.0
         version: 1.0.0(vue@3.4.38(typescript@5.4.5))
+      vue-collapsed:
+        specifier: ^1.3.4
+        version: 1.3.4
       vue-router:
         specifier: ^4.3.3
         version: 4.4.3(vue@3.4.38(typescript@5.4.5))
@@ -1150,6 +1153,9 @@ packages:
     peerDependencies:
       vue: ^3.0.0
 
+  vue-collapsed@1.3.4:
+    resolution: {integrity: sha512-W92b+QT3n5iTrfrH6kyvx3TsriYPfy/Ymsb6DaanjeMkJYMdVl1S4wzKRYVDsxWQPDxiC+5m+UwPwT/8YAYodA==}
+
   vue-demi@0.14.10:
     resolution: {integrity: sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==}
     engines: {node: '>=12'}
@@ -2215,6 +2221,8 @@ snapshots:
   vue-3-slider-component@1.0.0(vue@3.4.38(typescript@5.4.5)):
     dependencies:
       vue: 3.4.38(typescript@5.4.5)
+
+  vue-collapsed@1.3.4: {}
 
   vue-demi@0.14.10(vue@3.4.38(typescript@5.4.5)):
     dependencies:
