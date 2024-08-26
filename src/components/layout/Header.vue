@@ -1,19 +1,23 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { headerRouter } from '@/config/masterData'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import locale from '@/config/locale.json'
 import { ref, defineEmits } from 'vue'
 const emits = defineEmits(['showMenu'])
 const showMenu = ref<boolean>(false)
+const route = useRoute()
+const router = useRouter()
 
 const currentPath = (path: string) => {
-  const route = useRoute()
   return route.path === path
 }
 
 const handleShowMenu = () => {
   showMenu.value = !showMenu.value
+  if (!showMenu.value) {
+    router.replace('/')
+  }
   emits('showMenu', showMenu.value)
 }
 </script>
@@ -24,7 +28,7 @@ const handleShowMenu = () => {
         <img src="@/assets/logo.svg" alt="logo-finnx" class="mr-4" />
         <RouterLink
           v-for="header in headerRouter"
-          :to="header.path"
+          to="/"
           :key="header.title"
           class="header-router-link"
         >
@@ -37,14 +41,25 @@ const handleShowMenu = () => {
         </RouterLink>
       </nav>
       <div class="header-btn-layout mr-24">
-        <button class="secondary-btn menu-btn" v-if="!showMenu" @click="handleShowMenu">
-          {{ locale.header.menu }}
+        <button
+          class="secondary-btn menu-btn pop-hide-animation"
+          v-if="!showMenu"
+          @click="handleShowMenu"
+        >
+          <h3 class="display-3">{{ locale.header.menu }}</h3>
         </button>
-        <button class="close-btn" v-else @click="handleShowMenu">
-          <img src="@/assets/close-icon.svg" alt="close" />
+        <button class="close-btn pop-hide-animation" v-else @click="handleShowMenu">
+          <h3 class="display-3 blue-color tablet-screen">{{ locale.header.back }}</h3>
+          <img src="@/assets/close-icon.svg" alt="close" class="mb-screen" />
         </button>
-        <button class="secondary-btn operate-btn">{{ locale.header.sign_in }}</button>
-        <button class="primary-btn operate-btn">{{ locale.header.start }}</button>
+        <button class="secondary-btn operate-btn">
+          <h3 class="display-3">
+            {{ locale.header.sign_in }}
+          </h3>
+        </button>
+        <button class="primary-btn operate-btn">
+          <h3 class="display-3">{{ locale.header.start }}</h3>
+        </button>
       </div>
     </div>
   </header>
@@ -93,8 +108,39 @@ const handleShowMenu = () => {
   }
 
   .close-btn {
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 12px 28px;
     border: 0px;
-    background-color: transparent;
+    background-color: $blue-l;
+
+    .tablet-screen,
+    .mb-screen {
+      display: block;
+    }
+
+    @media (max-width: $size-tablet) {
+      .tablet-screen {
+        display: block;
+      }
+
+      .mb-screen {
+        display: none;
+      }
+    }
+
+    @media (max-width: $size-mobile) {
+      background-color: transparent;
+
+      .tablet-screen {
+        display: none;
+      }
+
+      .mb-screen {
+        display: block;
+      }
+    }
   }
 
   .menu-btn,

@@ -17,7 +17,7 @@ const currentPath = (path: string) => {
         </div>
         <RouterLink
           v-for="footer in headerRouter"
-          :to="footer.path"
+          to="/"
           :key="footer.title"
           class="footer-router-link text-center grid-item"
         >
@@ -34,7 +34,7 @@ const currentPath = (path: string) => {
       <nav class="footer-nav-layout ml-24" aria-label="sub-footer-policy">
         <RouterLink
           v-for="footer in footerRouter"
-          :to="footer.path"
+          to="/"
           :key="footer.title"
           class="footer-router-link text-center"
         >

@@ -9,8 +9,12 @@ import locale from '@/config/locale.json'
         <h1 class="sherbet-color display-1">{{ locale.online_leave.title }}</h1>
         <h3 class="black-color display-3 mt-24">{{ locale.online_leave.sub_title }}</h3>
         <div class="flex-column-start gap-12 mt-24">
-          <button class="secondary-btn custom-w">{{ locale.common.detail }}</button>
-          <button class="primary-btn custom-w">{{ locale.common.start }}</button>
+          <button class="secondary-btn custom-w">
+            <h3 class="display-3">{{ locale.common.detail }}</h3>
+          </button>
+          <button class="primary-btn custom-w">
+            <h3 class="display-3">{{ locale.common.start }}</h3>
+          </button>
         </div>
       </div>
       <div class="grid-item">
