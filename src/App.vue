@@ -1,15 +1,21 @@
 <script setup lang="ts">
 import Header from '@/components/layout/Header.vue'
+import Menu from '@/components/layout/Menu.vue'
 
-const handleShowMenu = () => {
-  
+import { ref } from 'vue'
+
+const showMenu = ref<boolean>(false)
+
+const handleShowMenu = (trigger:boolean) => {
+  showMenu.value = trigger
 }
 </script>
 
 <template>
   <Header @show-menu="handleShowMenu"></Header>
   <main class="flex justify-center main-height">
-    <RouterView />
+    <RouterView v-if="!showMenu"/>
+    <Menu v-else/>
   </main>
 </template>
 <style scoped lang="scss">

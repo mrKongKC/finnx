@@ -7,7 +7,7 @@ import Footer from '@/components/layout/Footer.vue'
 </script>
 
 <template>
-  <div class="flex-column-center w-100 gap-20">
+  <div class="flex-column-center w-100 gap-20 pop-hide-animation">
     <div class="mw-lg w-100">
       <OnlineLeave />
     </div>
