@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import locale from '../config/locale.json'
+import locale from '@/config/locale.json'
 import OnlineLeave from '@/components/content/OnLineLeave.vue'
 import Divider from '@/components/content/Divider.vue'
 import Overview from '@/components/content/Overview.vue'

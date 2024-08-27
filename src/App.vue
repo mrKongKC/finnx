@@ -6,7 +6,7 @@ import { ref } from 'vue'
 
 const showMenu = ref<boolean>(false)
 
-const handleShowMenu = (trigger:boolean) => {
+const handleShowMenu = (trigger: boolean) => {
   showMenu.value = trigger
 }
 </script>
@@ -14,8 +14,8 @@ const handleShowMenu = (trigger:boolean) => {
 <template>
   <Header @show-menu="handleShowMenu"></Header>
   <main class="flex justify-center main-height">
-    <RouterView v-if="!showMenu"/>
-    <Menu v-else/>
+    <RouterView v-if="!showMenu" />
+    <Menu v-else />
   </main>
 </template>
 <style scoped lang="scss">
