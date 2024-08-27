@@ -1,7 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script lang="ts" setup>
 import locale from '@/config/locale.json'
-import { employeeData } from '@/config/masterData.js'
+import { employeeData } from '@/config/masterData'
 import Icon from '@/components/common/Icon.vue'
 </script>
 <template>
