@@ -7,7 +7,7 @@ import locale from '@/config/locale.json'
     <div class="grid-container">
       <div class="grid-item">
         <h1 class="sherbet-color display-1">{{ locale.online_leave.title }}</h1>
-        <h3 class="black-color display-3 mt-24">{{ locale.online_leave.sub_title }}</h3>
+        <h2 class="black-color display-3 mt-24">{{ locale.online_leave.sub_title }}</h2>
         <div class="flex-column-start gap-12 mt-24">
           <button class="secondary-btn custom-w">
             <h3 class="display-3">{{ locale.common.detail }}</h3>
@@ -18,7 +18,7 @@ import locale from '@/config/locale.json'
         </div>
       </div>
       <div class="grid-item">
-        <img src="@/assets/img/content-1.png" alt="content-1" class="responsive-image" />
+        <img src="@/assets/img/content-1.png" alt="content-1" class="responsive-image" loading="lazy"/>
       </div>
     </div>
   </div>

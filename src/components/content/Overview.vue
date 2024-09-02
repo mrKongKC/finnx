@@ -7,7 +7,7 @@ import Promotion from '@/components/content/vannilaDetail/Promotion.vue'
 import Question from '@/components/content/vannilaDetail/Question.vue'
 </script>
 <template>
-  <div class="flex-column-center gap-32 mr-24 ml-24">
+  <div class="flex-column-center gap-32 padding-screen mr-24 ml-24">
     <HumanResource />
     <Employee />
     <Department />
@@ -15,3 +15,13 @@ import Question from '@/components/content/vannilaDetail/Question.vue'
     <Question />
   </div>
 </template>
+<style scoped lang="scss">
+@import '@/assets/variable.scss';
+.padding-screen {
+  padding: 0px 32px;
+
+  @media (max-width: $size-tablet) {
+    padding: 0px;
+  }
+}
+</style>

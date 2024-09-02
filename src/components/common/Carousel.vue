@@ -44,7 +44,7 @@ watch(currentIndex, (newVal, oldVale) => {
             class="step-container"
           >
             <div class="group-inside">
-              <img :src="step.iconStep" width="28px" />
+              <img :src="step.iconStep" width="28px" loading="lazy"/>
             </div>
             <p class="font-600">{{ step.title }}</p>
           </li>
@@ -53,12 +53,12 @@ watch(currentIndex, (newVal, oldVale) => {
     </div>
     <div class="left-icon-container">
       <button class="primary-btn-circle" @click="setIndex(currentIndex - 1)">
-        <img src="@/assets/img/arrow-left-solid.svg" />
+        <img src="@/assets/img/arrow-left-solid.svg" loading="lazy"/>
       </button>
     </div>
     <div class="right-icon-container">
       <button class="primary-btn-circle" @click="setIndex(currentIndex + 1)">
-        <img src="@/assets/img/arrow-right-solid.svg" />
+        <img src="@/assets/img/arrow-right-solid.svg" loading="lazy"/>
       </button>
     </div>
     <div class="custom-w-70 absolute img-display-layout">
@@ -67,6 +67,7 @@ watch(currentIndex, (newVal, oldVale) => {
         :src="items[currentIndex].image"
         class="responsive-image"
         :class="{ 'pop-hide-animation': activeAnimation }"
+        loading="lazy"
       />
     </div>
     <div class="bottom-btn-layout">
