@@ -35,6 +35,13 @@ p {
   font-size: 30px;
 }
 
+.display-1-responsive {
+  font-size: 30px;
+  @media (max-width: $size-mobile) {
+    font-size: 24px;
+  }
+}
+
 .display-2 {
   font-size: 24px;
 }
@@ -53,6 +60,23 @@ p {
 
 .absolute {
   position: absolute;
+}
+
+.custom-p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mt-60{
+  margin-top: 60px;
+}
+
+.mb-60{
+  margin-bottom: 60px;
+}
+
+.gap-60{
+  gap: 60px;
 }
 
 .font-600 {
@@ -160,6 +184,10 @@ p {
 
 .w-100 {
   width: 100%;
+}
+
+.h-100{
+  height: 100%;
 }
 
 .text-center {

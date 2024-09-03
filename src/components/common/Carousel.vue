@@ -33,7 +33,7 @@ watch(currentIndex, (newVal, oldVale) => {
 </script>
 
 <template>
-  <div class="custom-h-450 relative card-blue-l">
+  <div class="custom-h-400 relative card-blue-l">
     <div class="flex justify-center">
       <div class="custom-w-70">
         <ol class="stepper">
@@ -44,7 +44,7 @@ watch(currentIndex, (newVal, oldVale) => {
             class="step-container"
           >
             <div class="group-inside">
-              <img :src="step.iconStep" width="28px" />
+              <img :src="step.iconStep" width="28px" :alt="`step-icon-${index}`"/>
             </div>
             <p class="font-600">{{ step.title }}</p>
           </li>
@@ -53,12 +53,12 @@ watch(currentIndex, (newVal, oldVale) => {
     </div>
     <div class="left-icon-container">
       <button class="primary-btn-circle" @click="setIndex(currentIndex - 1)">
-        <img src="@/assets/img/arrow-left-solid.svg" />
+        <img src="@/assets/img/arrow-left-solid.svg" alt="left-icon"/>
       </button>
     </div>
     <div class="right-icon-container">
       <button class="primary-btn-circle" @click="setIndex(currentIndex + 1)">
-        <img src="@/assets/img/arrow-right-solid.svg" />
+        <img src="@/assets/img/arrow-right-solid.svg" alt="right-icon"/>
       </button>
     </div>
     <div class="custom-w-70 absolute img-display-layout">
@@ -67,6 +67,7 @@ watch(currentIndex, (newVal, oldVale) => {
         :src="items[currentIndex].image"
         class="responsive-image"
         :class="{ 'pop-hide-animation': activeAnimation }"
+        loading="lazy"
       />
     </div>
     <div class="bottom-btn-layout">
@@ -98,17 +99,26 @@ watch(currentIndex, (newVal, oldVale) => {
   }
 }
 
-.custom-h-450 {
-  height: 450px;
+.custom-h-400 {
+  height: 400px;
+
+  @media (max-width: $size-mobile) {
+    height: 460px;
+  }
+
+  @media (max-width: $size-sm) {
+    height: 400px;
+  }
 }
 
 .img-display-layout {
-  height: 300px;
-  bottom: -29%;
+  height: 280px;
+  bottom: -30.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   @media (max-width: $size-mobile) {
-    margin-bottom: 46px;
+    height: 300px;
+    bottom: -20.5%;
   }
 }
 
@@ -116,15 +126,16 @@ watch(currentIndex, (newVal, oldVale) => {
   position: absolute;
   display: none;
   align-items: center;
-  gap: 8px;
-  bottom: 4px;
+  gap: 12px;
+  bottom: 12px;
   left: 50%;
   transform: translate(-50%, -50%);
 
   .bottom-btn,
   .bottom-btn-active {
     border-radius: 50%;
-    padding: 8px;
+    width: 10px;
+    height: 10px;
     border: 0px;
     background: $grey-wolf;
     cursor: pointer;
@@ -146,21 +157,21 @@ watch(currentIndex, (newVal, oldVale) => {
 
 .img-display-layout.custom-w-70 {
   @media (max-width: $size-sm) {
-    width: 90%;
-    bottom: -34%;
+    width: 92%;
+    bottom: -28%;
   }
 }
 
 .left-icon-container {
-  left: 52px;
-  bottom: 100px;
+  left: 8.5%;
+  bottom: 20%;
   display: block;
   position: absolute;
 }
 
 .right-icon-container {
-  right: 52px;
-  bottom: 100px;
+  right: 8.5%;
+  bottom: 20%;
   display: block;
   position: absolute;
 }

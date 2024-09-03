@@ -9,9 +9,7 @@ const showMenu = ref<boolean>(false)
 const route = useRoute()
 const router = useRouter()
 
-const currentPath = (path: string) => {
-  return route.path === path
-}
+const currentPath = (path: string) => route.path === path
 
 const handleShowMenu = () => {
   showMenu.value = !showMenu.value
@@ -25,19 +23,19 @@ const handleShowMenu = () => {
   <header class="flex-center justify-center pt-24 pb-24">
     <div class="wrapper mw-lg w-100">
       <nav class="header-nav-layout ml-24">
-        <img src="@/assets/logo.svg" alt="logo-finnx" class="mr-4" />
+        <img src="@/assets/logo.svg" alt="logo-finnx" class="mr-4" loading="lazy"/>
         <RouterLink
           v-for="header in headerRouter"
           to="/"
           :key="header.title"
           class="header-router-link"
         >
-          <h3
-            class="display-3 black-color pointer hover-router-link"
+          <p
+            class="display-3 font-700 black-color pointer hover-router-link"
             :class="{ 'blue-color': currentPath(header.path) }"
           >
             {{ header.title }}
-          </h3>
+          </p>
         </RouterLink>
       </nav>
       <div class="header-btn-layout mr-24">
@@ -46,19 +44,19 @@ const handleShowMenu = () => {
           v-if="!showMenu"
           @click="handleShowMenu"
         >
-          <h3 class="display-3">{{ locale.header.menu }}</h3>
+          <p class="display-3 font-700">{{ locale.header.menu }}</p>
         </button>
         <button class="close-btn pop-hide-animation" v-else @click="handleShowMenu">
-          <h3 class="display-3 blue-color tablet-screen">{{ locale.header.back }}</h3>
-          <img src="@/assets/close-icon.svg" alt="close" class="mb-screen" />
+          <p class="display-3 font-700 blue-color tablet-screen">{{ locale.header.back }}</p>
+          <img src="@/assets/close-icon.svg" alt="close" class="mb-screen" loading="lazy"/>
         </button>
         <button class="secondary-btn operate-btn">
-          <h3 class="display-3">
+          <p class="display-3 font-700">
             {{ locale.header.sign_in }}
-          </h3>
+          </p>
         </button>
         <button class="primary-btn operate-btn">
-          <h3 class="display-3">{{ locale.header.start }}</h3>
+          <p class="display-3 font-700">{{ locale.header.start }}</p>
         </button>
       </div>
     </div>
@@ -76,7 +74,7 @@ const handleShowMenu = () => {
   .header-nav-layout {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 30px;
 
     .header-router-link {
       text-decoration: none;
@@ -97,7 +95,7 @@ const handleShowMenu = () => {
   .header-btn-layout {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
   }
 
   .operate-btn {

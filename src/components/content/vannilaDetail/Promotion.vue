@@ -2,31 +2,74 @@
 <script setup lang="ts">
 import locale from '@/config/locale.json'
 import VueSlider from 'vue-3-slider-component'
-import { promotionList } from '@/config/masterData'
+import { packageList } from '@/config/masterData'
+import { promotionListLocales } from '@/config/masterData'
+import packageFs from '@/assets/img/package-1.svg'
+import packageSc from '@/assets/img/package-2.svg'
+import packageTd from '@/assets/img/package-3.svg'
+import { computed, ref } from 'vue'
 
-import { ref } from 'vue'
+const packagePrices: { [key: string]: number } = {
+  Cone: 29,
+  Sundae: 59,
+  Quart: 89
+}
+
+// I don't know the exact discount calculate
+// Just calculate by value pattern in UI figma
+const packageNets: { [key: string]: number } = {
+  Cone: 60,
+  Sundae: 100,
+  Quart: 200
+}
+
+const packageImages: { [key: string]: string } = {
+  Cone: packageFs,
+  Sundae: packageSc,
+  Quart: packageTd
+}
+
 const sliderValue = ref(30)
+
+const promotionList = computed(() => {
+  return packageList.map((pkg: { title: string }) => {
+    const price = sliderValue.value * (packagePrices[pkg.title] || 0)
+    const net = price - packageNets[pkg.title] || 0
+
+    return {
+      package: {
+        ...pkg,
+        net: net,
+        price: price
+      },
+      image: packageImages[pkg.title],
+      list: promotionListLocales
+    }
+  })
+})
 </script>
 
 <template>
-  <div class="flex-column-center gap-32 w-100">
+  <div class="flex-column-center w-100">
     <div class="text-center">
-      <h1 class="sherbet-color display-1 mw-550 text-center mt-24">
+      <h2 class="sherbet-color display-1-responsive mw-550 text-center">
         {{ locale.vannila_detail.promotion.title }}
-      </h1>
-      <p class="font-600 mt-12">{{ locale.vannila_detail.promotion.detail }}</p>
+      </h2>
+      <p class="font-600 mt-4">{{ locale.vannila_detail.promotion.detail }}</p>
     </div>
-    <div class="flex-column-center gap-32 w-100">
+    <div class="flex-column-center mt-40 gap-30 w-100">
       <div class="level-person mw-550">
         <div class="title-step-1">
-          <span class="circle-blue">1</span>
-          <h3 class="display-3 blue-color">{{ locale.vannila_detail.promotion.steps.step_1 }}</h3>
+          <p class="circle-blue font-600">1</p>
+          <p class="display-3 font-700 blue-color">{{
+            locale.vannila_detail.promotion.steps.step_1
+          }}</p>
         </div>
         <div class="card custom-card custom-w-100">
-          <h3 class="display-3 sherbet-color text-center mb-12">
+          <p class="display-3 font-700 sherbet-color text-center mb-12">
             {{ locale.vannila_detail.promotion.staff }} {{ sliderValue }}
             {{ locale.vannila_detail.promotion.person }}
-          </h3>
+          </p>
           <VueSlider
             class="custom-slider"
             v-model="sliderValue"
@@ -39,7 +82,7 @@ const sliderValue = ref(30)
             :labelActiveStyle="{ color: 'red' }"
           >
             <template #tooltip="{ value }">
-              <h3 class="display-3 sherbet-color">{{ value }}</h3>
+              <p class="display-3 sherbet-color font-700">{{ value }}</p>
             </template>
             <template v-slot:mark="{ label }">
               <div
@@ -60,12 +103,14 @@ const sliderValue = ref(30)
           </VueSlider>
         </div>
       </div>
-      <div class="flex-column-center gap-24 w-100">
+      <div class="flex-column-center gap-30 w-100">
         <div class="title-step-2">
-          <span class="circle-blue">2</span>
-          <h3 class="display-3 blue-color">{{ locale.vannila_detail.promotion.steps.step_2 }}</h3>
+          <p class="circle-blue font-600">2</p>
+          <p class="display-3 font-700 blue-color">
+            {{ locale.vannila_detail.promotion.steps.step_2 }}
+          </p>
         </div>
-        <div class="flex-center justify-between gap-12 w-100 custom-flex">
+        <div class="flex-center justify-between gap-12 w-100 mt-15 custom-flex">
           <div
             v-for="(content, index) in promotionList"
             :key="index"
@@ -74,23 +119,23 @@ const sliderValue = ref(30)
           >
             <div class="card-header">
               <div class="card-header-content">
-                <span class="recommend-package no-wrap red-bg" v-show="index === 1">
+                <div class="recommend-package no-wrap red-bg" v-show="index === 1">
                   <p class="font-600 white-color">
-                    {{ locale.vannila_detail.promotion.recommend_package }}
+                    {{ locale.vannila_detail.promotion.recommend_package }} 
                   </p>
-                </span>
+                </div>
                 <div class="flex-center gap-12">
-                  <img :src="content.image" :alt="content.package.title" />
-                  <h2 class="display-2 sherbet-color">{{ content.package.title }}</h2>
+                  <img :src="content.image" :alt="`package-icon-${index}`" loading="lazy"/>
+                  <p class="display-2 font-700 sherbet-color">{{ content.package.title }}</p>
                 </div>
                 <div class="flex-end gap-12 mt-12">
-                  <h2 class="display-2 green-color">
+                  <p class="display-2 green-color font-700">
                     {{
                       `${content.package.net}${locale.vannila_detail.promotion.baht}/${locale.vannila_detail.promotion.month}`
                     }}
-                  </h2>
+                  </p>
                   <p class="font-600 black-color line-through">
-                    {{ `${content.package.price}${locale.vannila_detail.promotion.baht}` }}
+                    {{ `${content.package?.price}${locale.vannila_detail.promotion.baht}` }}
                   </p>
                 </div>
               </div>
@@ -101,13 +146,13 @@ const sliderValue = ref(30)
                 v-for="(item, index) in content.list"
                 :key="index"
               >
-                <img src="@/assets/img/allow-icon.svg" alt="allow" />
+                <img src="@/assets/img/allow-icon.svg" alt="allow" loading="lazy"/>
                 <p class="black-color font-600">{{ item.title }}</p>
               </div>
               <button class="primary-btn w-100 mt-12">
-                <h3 class="display-3">
+                <p class="display-3 font-700">
                   {{ locale.vannila_detail.promotion.trial }}
-                </h3>
+                </p>
               </button>
             </div>
           </div>
@@ -211,6 +256,6 @@ const sliderValue = ref(30)
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 24px;
+  gap: 30px;
 }
 </style>
