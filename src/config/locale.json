@@ -24,14 +24,14 @@
   },
   "online_leave": {
     "divider": "บริษัทที่ใช้งานผ่านวันนี้ลา",
-    "title": "<H1>แอปลางานออนไลน์ผ่าน LINE OA",
+    "title": "แอปลางานออนไลน์ผ่าน LINE OA",
     "sub_title": "แจ้งและอนุมัติวันลาออนไลน์ ใช้งานง่าย ผ่าน LINE OA ไม่ต้องติดตั้งแอปเพิ่ม"
   },
   "vannila_detail": {
     "overview": "ภาพรวมของ Vannila",
-    "first_title": "<H2>โปรแกรม HR บริหารงานบุคคลใช้ง่าย ใช้งานผ่าน LINE OA",
-    "second_title": "<H2>จุดเด่น และรายละเอียดแต่ละเมนู",
-    "first_sub_title": "<H3>Leave Request & Management",
+    "first_title": "โปรแกรม HR บริหารงานบุคคลใช้ง่าย ใช้งานผ่าน LINE OA",
+    "second_title": "จุดเด่น และรายละเอียดแต่ละเมนู",
+    "first_sub_title": "Leave Request & Management",
     "manage_leave_day": "จัดการวันลา และแจ้งวันลาออนไลน์ผ่าน LINE OA",
     "manage_leave_day_detail": "ระบบวันลาออนไลน์ ่ส่งคำขอวันลาทาง LINE OA และอนุมัติวันลาจากที่ใดก็ได้ ยังสามารถจัดการวันลา และประเภทต่างๆ ได้อย่างอิสระ",
     "benefits": {
@@ -58,9 +58,9 @@
     },
     "employee": {
       "first_title": "ตรวจสอบวันลาผ่านหน้าโปรไฟล์",
-      "second_title": "<H3>Employee’s Profile",
+      "second_title": "Employee’s Profile",
       "sub_title_profile": "หน้าโปรไฟล์ส่วนตัว เลือกดูจำนวนวันลาคงเหลือ แยกตามประเภทต่างๆ และดูประวัติการทำงานของบริษัท ได้ตลอดเวลาผ่าน LINE OA",
-      "third_title": "<H3>Employee’s Management",
+      "third_title": "Employee’s Management",
       "sub_title_management": "จัดการ แก้ไขข้อมูลเพื่อนร่วมงาน กำหนดสิทธิ์ในการใช้งานของระบบ HR ",
       "manage_permission": "กำหนดระดับสิทธิ์ใช้งาน",
       "employee_profile": {
@@ -74,12 +74,12 @@
       }
     },
     "department": {
-      "title": "<H3>Department Management",
+      "title": "Department Management",
       "first_sub_title": "จัดการแผนก บริหารงานบุคคล",
       "second_sub_title": "ระบบวันลาออนไลน์ ่ส่งคำขอวันลาทาง LINE OA และอนุมัติวันลาจากที่ใดก็ได้ ยังสามารถจัดการวันลา และประเภทต่างๆ ได้อย่างอิสระ"
     },
     "promotion": {
-      "title": "<H2>โปรโมชั่นราคาสุดพิเศษ เฉพาะเดือนนี้!",
+      "title": "โปรโมชั่นราคาสุดพิเศษ เฉพาะเดือนนี้!",
       "detail": "เลือกแพ็คเกจราคาตามความเหมาะสมของจำนวนพนักงานได้เลย",
       "steps": {
         "step_1": "ระบุจำนวนพนักงานในบริษัท",
@@ -100,7 +100,7 @@
       "recommend_package": "แพ็คเกจแนะนำ!"
     },
     "question": {
-      "title": "<H2>คำถามที่พบบ่อย"
+      "title": "คำถามที่พบบ่อย"
     }
   }
 }

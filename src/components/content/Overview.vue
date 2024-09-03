@@ -7,7 +7,7 @@ import Promotion from '@/components/content/vannilaDetail/Promotion.vue'
 import Question from '@/components/content/vannilaDetail/Question.vue'
 </script>
 <template>
-  <div class="flex-column-center gap-32 padding-screen mr-24 ml-24">
+  <div class="flex-column-center gap-30 padding-screen mr-24 ml-24">
     <HumanResource />
     <Employee />
     <Department />

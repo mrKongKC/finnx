@@ -6,12 +6,12 @@ import Icon from '@/components/common/Icon.vue'
 import Carousel from '@/components/common/Carousel.vue'
 </script>
 <template>
-  <div class="flex-column-center gap-32">
+  <div class="flex-column-center gap-10">
     <p class="font-600">{{ locale.vannila_detail.overview }}</p>
     <h2 class="sherbet-color display-1-responsive mw-550 text-center">
       {{ locale.vannila_detail.first_title }}
     </h2>
-    <div class="grid-container-icon mt-12">
+    <div class="grid-container-icon mt-30">
       <div class="grid-item" v-for="content in hrContent" :key="content.title">
         <div class="grid-item__icon-content">
           <Icon :icon="content.icon" :img-size="40" />
@@ -19,18 +19,18 @@ import Carousel from '@/components/common/Carousel.vue'
         </div>
       </div>
     </div>
-    <h2 class="sherbet-color display-1-responsive mw-550 text-center mt-24">
+    <h2 class="sherbet-color display-1-responsive mw-550 text-center mt-50">
       {{ locale.vannila_detail.second_title }}
     </h2>
-    <div class="grid-container-content-1">
-      <div class="card custom-h-450-left">
+    <div class="grid-container-content-1 mt-20">
+      <div class="card custom-h-400-left">
         <h3 class="sherbet-color display-2 text-left w-100">
           {{ locale.vannila_detail.first_sub_title }}
         </h3>
-        <p class="black-color font-600 text-left w-100 mt-24">
+        <p class="black-color font-600 text-left w-100 mt-10">
           {{ locale.vannila_detail.manage_leave_day }}
         </p>
-        <p class="grey-color font-600 text-left mt-24">
+        <p class="grey-color font-600 text-left mt-10">
           {{ locale.vannila_detail.manage_leave_day_detail }}
         </p>
         <div class="grid-item-1 mt-36">
@@ -55,28 +55,11 @@ import Carousel from '@/components/common/Carousel.vue'
   max-width: 550px;
 }
 
-.custom-h-450,
-.custom-h-450-left {
-  height: 450px;
-}
+.custom-h-400-left {
+  height: 400px;
 
-.custom-h-600 {
-  height: 600px;
   @media (max-width: $size-tablet) {
     height: auto;
-  }
-}
-
-.custom-h-450-left {
-  @media (max-width: $size-tablet) {
-    height: auto;
-  }
-}
-
-.custom-gap-16 {
-  gap: 38px;
-  @media (max-width: $size-tablet) {
-    gap: 16px;
   }
 }
 
@@ -114,14 +97,13 @@ import Carousel from '@/components/common/Carousel.vue'
 .grid-container-content-1 {
   display: grid;
   justify-content: space-between;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
-  grid-template-columns: calc(37% - 10px) calc(63% - 10px);
+  grid-template-columns: calc(37% - 15px) calc(63% - 15px);
 
   .grid-item-1 {
     display: flex;
     justify-content: space-between;
-    gap: 24px;
     align-items: center;
     width: 100%;
 
@@ -130,7 +112,7 @@ import Carousel from '@/components/common/Carousel.vue'
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
   }
 

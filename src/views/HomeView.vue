@@ -7,8 +7,8 @@ import Footer from '@/components/layout/Footer.vue'
 </script>
 
 <template>
-  <div class="flex-column-center w-100 gap-20 pop-hide-animation">
-    <div class="mw-lg w-100">
+  <div class="flex-column-center w-100 gap-60 pop-hide-animation">
+    <div class="mw-lg w-100 mt-36">
       <OnlineLeave />
     </div>
     <Divider :title="locale.online_leave.divider"></Divider>
@@ -20,4 +20,5 @@ import Footer from '@/components/layout/Footer.vue'
     </div>
   </div>
 </template>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+</style>

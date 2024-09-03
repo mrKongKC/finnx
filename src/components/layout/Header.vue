@@ -74,7 +74,7 @@ const handleShowMenu = () => {
   .header-nav-layout {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 30px;
 
     .header-router-link {
       text-decoration: none;
@@ -95,7 +95,7 @@ const handleShowMenu = () => {
   .header-btn-layout {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
   }
 
   .operate-btn {
