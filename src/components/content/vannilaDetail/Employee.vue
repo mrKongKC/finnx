@@ -19,6 +19,7 @@ import Icon from '@/components/common/Icon.vue'
               src="@/assets/img/leave-profile-1.png"
               alt="leave-profile-1"
               class="responsive-image"
+              loading="lazy"
             />
           </div>
         </div>
@@ -109,19 +110,14 @@ import Icon from '@/components/common/Icon.vue'
   }
 
   .card-content-1-img-layout {
-    height: 280px;
+    height: 270px;
     width: 100%;
-    bottom: -39%;
+    bottom: -38%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    @media (max-width: 425px) {
-      bottom: -39%;
-      max-width: 90%;
-    }
-
     @media (max-width: $size-sm) {
-      bottom: -46.5%;
+      bottom: -44%;
       max-width: 80%;
     }
   }
@@ -151,19 +147,30 @@ import Icon from '@/components/common/Icon.vue'
     height: calc(630px - 34px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 52px;
+
+    @media (max-width: $size-tablet) {
+      height: auto;
+      gap: 20px;
+    }
 
     .grid-item-2__icon-content-container {
       display: flex;
       gap: 32px;
 
       @media (max-width: $size-tablet) {
+        justify-content: space-between;
         gap: 4px;
+      }
+
+      
+      @media (max-width: $size-mobile) {
+        justify-content: initial;
       }
 
       @media (max-width: $size-sm) {
         flex-direction: column;
+        gap: 12px;
       }
 
       .grid-item-2__icon-content {

@@ -41,14 +41,19 @@ const setImgDefault = () => {
         @mouseleave="setImgDefault"
         @click="activeTab(index)"
       >
-        <img :src="item.iconA" :alt="`icon-active-${index}`" width="28" v-if="currentHover === index || currentIndex === index" />
+        <img
+          :src="item.iconA"
+          :alt="`icon-active-${index}`"
+          width="28"
+          v-if="currentHover === index || currentIndex === index"
+        />
         <img :src="item.icon" :alt="`icon-${index}`" width="28" v-else />
         <p class="display-3 font-700">{{ item.title }}</p>
       </button>
     </div>
     <div class="content" v-for="(item, index) in items" :key="index">
       <div class="img-container pop-hide-animation" v-if="currentIndex === index">
-        <img :src="item.image" class="responsive-image" :alt="`tab-${index}`"/>
+        <img :src="item.image" class="responsive-image" :alt="`tab-${index}`" />
       </div>
     </div>
   </div>
@@ -96,7 +101,7 @@ const setImgDefault = () => {
     .img-container {
       padding-top: 24px;
       width: 100%;
-      height: 340px;
+      height: 215px;
 
       @media (max-width: $size-mobile) {
         padding-top: 0px;

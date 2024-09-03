@@ -76,11 +76,14 @@ import Carousel from '@/components/common/Carousel.vue'
     align-items: center;
 
     .grid-item__icon-content {
-      max-width: 120px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 12px;
+
+      p {
+        max-width: 120px;
+      }
     }
   }
 
@@ -108,11 +111,14 @@ import Carousel from '@/components/common/Carousel.vue'
     width: 100%;
 
     .grid-item-1__icon-content {
-      max-width: 120px;
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 10px;
+
+      p {
+        max-width: 120px;
+      }
     }
   }
 

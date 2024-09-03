@@ -15,6 +15,8 @@ const packagePrices: { [key: string]: number } = {
   Quart: 89
 }
 
+// I don't know the exact discount calculate
+// Just calculate by value pattern in UI figma
 const packageNets: { [key: string]: number } = {
   Cone: 60,
   Sundae: 100,
