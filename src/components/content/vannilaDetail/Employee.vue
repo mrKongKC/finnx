@@ -43,9 +43,9 @@ import Icon from '@/components/common/Icon.vue'
         <div class="card">
           <div class="card-content-3">
             <div v-for="item in employeeData" :key="item.title">
-              <h2 class="sherbet-color display-2">
+              <h3 class="sherbet-color display-2">
                 {{ item.title }}
-              </h2>
+              </h3>
               <p class="black-color font-600 mt-24">
                 {{ item.subTitle }}
               </p>

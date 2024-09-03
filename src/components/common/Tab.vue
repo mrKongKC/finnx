@@ -41,8 +41,8 @@ const setImgDefault = () => {
         @mouseleave="setImgDefault"
         @click="activeTab(index)"
       >
-        <img :src="item.iconA" width="24" v-if="currentHover === index || currentIndex === index" />
-        <img :src="item.icon" width="24" v-else />
+        <img :src="item.iconA" :alt="`icon-active-${index}`" width="24" v-if="currentHover === index || currentIndex === index" />
+        <img :src="item.icon" :alt="`icon-${index}`" width="24" v-else />
         <h3 class="diplay-3">{{ item.title }}</h3>
       </button>
     </div>

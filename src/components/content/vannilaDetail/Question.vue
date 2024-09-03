@@ -28,7 +28,7 @@ const handleAccordion = (selectedIndex: number) => {
     <h2 class="display-2 sherbet-color text-center">{{ locale.vannila_detail.question.title }}</h2>
     <div class="grid-container mt-24">
       <div v-for="(question, index) in questions" :key="question.title" class="w-100">
-        <button :class="['panel w-100']" @click="() => handleAccordion(index)">
+        <button :class="['panel w-100']" class="pointer" @click="() => handleAccordion(index)">
           <p class="font-600 black-color">{{ question.title }}</p>
           <img src="@/assets/img/plus-icon.svg" alt="plus" v-show="!question.isExpanded" />
           <img src="@/assets/img/minus-icon.svg" alt="minus" v-show="question.isExpanded" />

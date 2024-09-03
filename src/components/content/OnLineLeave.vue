@@ -19,7 +19,7 @@ import locale from '@/config/locale.json'
       </div>
       <div class="grid-item">
         <img
-          src="@/assets/img/content-1.png"
+          src="@/assets/img/content-1.jpg"
           alt="content-1"
           class="responsive-image"
           loading="lazy"

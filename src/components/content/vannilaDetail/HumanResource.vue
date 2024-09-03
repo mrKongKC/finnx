@@ -8,9 +8,9 @@ import Carousel from '@/components/common/Carousel.vue'
 <template>
   <div class="flex-column-center gap-32">
     <p class="font-600">{{ locale.vannila_detail.overview }}</p>
-    <h1 class="sherbet-color display-1-responsive mw-550 text-center">
+    <h2 class="sherbet-color display-1-responsive mw-550 text-center">
       {{ locale.vannila_detail.first_title }}
-    </h1>
+    </h2>
     <div class="grid-container-icon mt-12">
       <div class="grid-item" v-for="content in hrContent" :key="content.title">
         <div class="grid-item__icon-content">
@@ -19,14 +19,14 @@ import Carousel from '@/components/common/Carousel.vue'
         </div>
       </div>
     </div>
-    <h1 class="sherbet-color display-1 mw-550 text-center mt-24">
+    <h2 class="sherbet-color display-1-responsive mw-550 text-center mt-24">
       {{ locale.vannila_detail.second_title }}
-    </h1>
+    </h2>
     <div class="grid-container-content-1">
       <div class="card custom-h-450-left">
-        <h2 class="sherbet-color display-2 text-left w-100">
+        <h3 class="sherbet-color display-2 text-left w-100">
           {{ locale.vannila_detail.first_sub_title }}
-        </h2>
+        </h3>
         <p class="black-color font-600 text-left w-100 mt-24">
           {{ locale.vannila_detail.manage_leave_day }}
         </p>

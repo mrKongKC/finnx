@@ -10,7 +10,7 @@ import Tab from '@/components/common/Tab.vue'
   <div class="card">
     <div class="grid-container-content-3">
       <div class="grid-item">
-        <h2 class="sherbet-color display-2">{{ locale.vannila_detail.department.title }}</h2>
+        <h3 class="sherbet-color display-2">{{ locale.vannila_detail.department.title }}</h3>
         <p class="black-color font-600 text-left mt-24">
           {{ locale.vannila_detail.department.first_sub_title }}
         </p>

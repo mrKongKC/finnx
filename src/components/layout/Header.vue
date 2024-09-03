@@ -9,9 +9,7 @@ const showMenu = ref<boolean>(false)
 const route = useRoute()
 const router = useRouter()
 
-const currentPath = (path: string) => {
-  return route.path === path
-}
+const currentPath = (path: string) => route.path === path
 
 const handleShowMenu = () => {
   showMenu.value = !showMenu.value
@@ -32,12 +30,12 @@ const handleShowMenu = () => {
           :key="header.title"
           class="header-router-link"
         >
-          <h3
+          <h2
             class="display-3 black-color pointer hover-router-link"
             :class="{ 'blue-color': currentPath(header.path) }"
           >
             {{ header.title }}
-          </h3>
+          </h2>
         </RouterLink>
       </nav>
       <div class="header-btn-layout mr-24">
