@@ -7,8 +7,8 @@ import locale from '@/config/locale.json'
     <div class="grid-container">
       <div class="grid-item">
         <h1 class="sherbet-color display-1">{{ locale.online_leave.title }}</h1>
-        <h2 class="black-color display-3 mt-24">{{ locale.online_leave.sub_title }}</h2>
-        <div class="flex-column-start gap-12 mt-24">
+        <h2 class="black-color display-3 mt-10">{{ locale.online_leave.sub_title }}</h2>
+        <div class="flex-column-start gap-10 mt-20">
           <button class="secondary-btn custom-w">
             <h3 class="display-3">{{ locale.common.detail }}</h3>
           </button>
@@ -18,7 +18,12 @@ import locale from '@/config/locale.json'
         </div>
       </div>
       <div class="grid-item">
-        <img src="@/assets/img/content-1.png" alt="content-1" class="responsive-image" loading="lazy"/>
+        <img
+          src="@/assets/img/content-1.png"
+          alt="content-1"
+          class="responsive-image"
+          loading="lazy"
+        />
       </div>
     </div>
   </div>
@@ -32,7 +37,7 @@ import locale from '@/config/locale.json'
 .grid-container {
   display: grid;
   padding: 20px;
-  align-items: flex-start;
+  align-items: center;
   grid-template-columns: 40% 60%;
 
   @media (max-width: $size-tablet) {
@@ -56,7 +61,9 @@ import locale from '@/config/locale.json'
 .grid-item:first-child {
   text-align: left;
   width: 90%;
-  margin-top: 50px;
+  @media (max-width: $size-mobile) {
+    margin-top: 12px;
+  }
 }
 
 .grid-item:last-child {

@@ -18,7 +18,11 @@ import Question from '@/components/content/vannilaDetail/Question.vue'
 <style scoped lang="scss">
 @import '@/assets/variable.scss';
 .padding-screen {
-  padding: 0px 32px;
+  padding: 0px 90px;
+
+   @media (max-width: 1024px) {
+    padding: 0px 40px;
+  }
 
   @media (max-width: $size-tablet) {
     padding: 0px;

@@ -28,11 +28,8 @@ import tabFsIcon from '@/assets/img/tab-1-non.svg'
 import tabScIcon from '@/assets/img/tab-2-non.svg'
 import tabTdIcon from '@/assets/img/tab-3-non.svg'
 
-import packageFs from '@/assets/img/package-1.svg'
-import packageSc from '@/assets/img/package-2.svg'
-import packageTd from '@/assets/img/package-3.svg'
 
-const promotionListLocales = [
+export const promotionListLocales = [
   { title: locale.vannila_detail.promotion.promotion_list.first },
   { title: locale.vannila_detail.promotion.promotion_list.second },
   { title: locale.vannila_detail.promotion.promotion_list.third },
@@ -40,21 +37,21 @@ const promotionListLocales = [
   { title: locale.vannila_detail.promotion.promotion_list.fifth }
 ]
 
-const package_list = [
+export const packageList = [
   {
     title: 'Cone',
-    net: '290',
-    price: '350'
+    net: 0,
+    price: 0
   },
   {
-    title: 'Cone',
-    net: '590',
-    price: '690'
+    title: 'Sundae',
+    net: 0,
+    price: 0
   },
   {
-    title: 'Cone',
-    net: '890',
-    price: '1,090'
+    title: 'Quart',
+    net: 0,
+    price: 0
   }
 ]
 
@@ -144,10 +141,4 @@ export const tabs = [
     iconA: tabActiveTdIcon,
     icon: tabTdIcon
   }
-]
-
-export const promotionList = [
-  { package: package_list[0], image: packageFs, list: promotionListLocales },
-  { package: package_list[1], image: packageSc, list: promotionListLocales },
-  { package: package_list[2], image: packageTd, list: promotionListLocales }
 ]

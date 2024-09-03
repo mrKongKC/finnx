@@ -8,7 +8,7 @@ import Carousel from '@/components/common/Carousel.vue'
 <template>
   <div class="flex-column-center gap-32">
     <p class="font-600">{{ locale.vannila_detail.overview }}</p>
-    <h1 class="sherbet-color display-1 mw-550 text-center">
+    <h1 class="sherbet-color display-1-responsive mw-550 text-center">
       {{ locale.vannila_detail.first_title }}
     </h1>
     <div class="grid-container-icon mt-12">

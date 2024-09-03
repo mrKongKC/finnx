@@ -2,10 +2,49 @@
 <script setup lang="ts">
 import locale from '@/config/locale.json'
 import VueSlider from 'vue-3-slider-component'
-import { promotionList } from '@/config/masterData'
+import { packageList } from '@/config/masterData'
+import { promotionListLocales } from '@/config/masterData'
+import packageFs from '@/assets/img/package-1.svg'
+import packageSc from '@/assets/img/package-2.svg'
+import packageTd from '@/assets/img/package-3.svg'
+import { computed, ref } from 'vue'
 
-import { ref } from 'vue'
+const packagePrices: { [key: string]: number } = {
+  Cone: 29,
+  Sundae: 59,
+  Quart: 89
+}
+
+const packageNets: { [key: string]: number } = {
+  Cone: 60,
+  Sundae: 100,
+  Quart: 200
+}
+
+const packageImages: { [key: string]: string } = {
+  Cone: packageFs,
+  Sundae: packageSc,
+  Quart: packageTd
+}
+
 const sliderValue = ref(30)
+
+const promotionList = computed(() => {
+  return packageList.map((pkg: { title: string }) => {
+    const price = sliderValue.value * (packagePrices[pkg.title] || 0)
+    const net = price - packageNets[pkg.title] || 0
+
+    return {
+      package: {
+        ...pkg,
+        net: net,
+        price: price
+      },
+      image: packageImages[pkg.title],
+      list: promotionListLocales
+    }
+  })
+})
 </script>
 
 <template>
@@ -80,7 +119,7 @@ const sliderValue = ref(30)
                   </p>
                 </span>
                 <div class="flex-center gap-12">
-                  <img :src="content.image" :alt="content.package.title" />
+                  <img :src="content.image" />
                   <h2 class="display-2 sherbet-color">{{ content.package.title }}</h2>
                 </div>
                 <div class="flex-end gap-12 mt-12">
@@ -90,7 +129,7 @@ const sliderValue = ref(30)
                     }}
                   </h2>
                   <p class="font-600 black-color line-through">
-                    {{ `${content.package.price}${locale.vannila_detail.promotion.baht}` }}
+                    {{ `${content.package?.price}${locale.vannila_detail.promotion.baht}` }}
                   </p>
                 </div>
               </div>

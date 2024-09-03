@@ -30,16 +30,14 @@ interface Tab extends BaseContent {
   iconA: string
 }
 
-interface Promotion {
-  package: {
-    title: string
-    net: string
-    price: string
-  }
-  image: string
-  list: {
-    title: string
-  }[]
+interface PackageList {
+  title: string
+  net: number
+  price: number
+}
+
+interface PromotionListLocales {
+  title: string
 }
 
 declare module '@/config/masterData' {
@@ -50,5 +48,6 @@ declare module '@/config/masterData' {
   export const leaveRequest: BaseContent[]
   export const carouselSteps: Carousel[]
   export const footerRouter: BaseRoute[]
-  export const promotionList: Promotion[]
+  export const packageList: PackageList[]
+  export const promotionListLocales: PromotionListLocales[]
 }

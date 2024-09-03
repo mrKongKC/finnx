@@ -35,6 +35,13 @@ p {
   font-size: 30px;
 }
 
+.display-1-responsive {
+  font-size: 30px;
+  @media (max-width: $size-mobile) {
+    font-size: 24px;
+  }
+}
+
 .display-2 {
   font-size: 24px;
 }

@@ -105,11 +105,11 @@ watch(currentIndex, (newVal, oldVale) => {
 
 .img-display-layout {
   height: 300px;
-  bottom: -29%;
+  bottom: -29.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   @media (max-width: $size-mobile) {
-    margin-bottom: 46px;
+    margin-bottom: 40px;
   }
 }
 
@@ -118,14 +118,15 @@ watch(currentIndex, (newVal, oldVale) => {
   display: none;
   align-items: center;
   gap: 8px;
-  bottom: 4px;
+  bottom: 15px;
   left: 50%;
   transform: translate(-50%, -50%);
 
   .bottom-btn,
   .bottom-btn-active {
     border-radius: 50%;
-    padding: 8px;
+    width: 10px;
+    height: 10px;
     border: 0px;
     background: $grey-wolf;
     cursor: pointer;
@@ -153,15 +154,15 @@ watch(currentIndex, (newVal, oldVale) => {
 }
 
 .left-icon-container {
-  left: 52px;
-  bottom: 100px;
+  left: 8.5%;
+  bottom: 20%;
   display: block;
   position: absolute;
 }
 
 .right-icon-container {
-  right: 52px;
-  bottom: 100px;
+  right: 8.5%;
+  bottom: 20%;
   display: block;
   position: absolute;
 }
