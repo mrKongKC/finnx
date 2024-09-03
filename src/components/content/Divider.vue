@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="container">
+  <div class="container mt-60">
     <span v-for="i in 2" :key="i" class="box"></span>
     <p class="content font-bold display-3 text-center">{{ title }}</p>
     <span v-for="i in 6" :key="i" class="box"></span>
