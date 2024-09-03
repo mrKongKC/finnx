@@ -148,7 +148,7 @@ const promotionList = computed(() => {
                 <p class="black-color font-600">{{ item.title }}</p>
               </div>
               <button class="primary-btn w-100 mt-12">
-                <p class="display-3">
+                <p class="display-3 font-700">
                   {{ locale.vannila_detail.promotion.trial }}
                 </p>
               </button>

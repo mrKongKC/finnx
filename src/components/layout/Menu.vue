@@ -20,22 +20,22 @@ const currentPath = (path: string) => {
           :key="header.title"
           class="header-router-link"
         >
-          <h3
-            class="display-3 black-color pointer hover-router-link"
+          <p
+            class="display-3 font-700 black-color pointer hover-router-link"
             :class="{ 'blue-color': currentPath(header.path) }"
           >
             {{ header.title }}
-          </h3>
+          </p>
         </RouterLink>
       </nav>
-      <div class="header-btn-layout mt-16">
+      <div class="header-btn-layout mt-30">
         <button class="secondary-btn w-100">
-          <h3 class="display-3">
+          <p class="display-3 font-700">
             {{ locale.header.sign_in }}
-          </h3>
+          </p>
         </button>
         <button class="primary-btn w-100">
-          <h3 class="display-3">{{ locale.header.start }}</h3>
+          <p class="display-3 font-700">{{ locale.header.start }}</p>
         </button>
       </div>
     </div>
@@ -49,7 +49,7 @@ const currentPath = (path: string) => {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 16px;
+  gap: 30px;
 
   .header-router-link {
     text-decoration: none;
@@ -68,6 +68,6 @@ const currentPath = (path: string) => {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  gap: 16px;
+  gap: 20px;
 }
 </style>

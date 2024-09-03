@@ -30,12 +30,12 @@ const handleShowMenu = () => {
           :key="header.title"
           class="header-router-link"
         >
-          <h2
-            class="display-3 black-color pointer hover-router-link"
+          <p
+            class="display-3 font-700 black-color pointer hover-router-link"
             :class="{ 'blue-color': currentPath(header.path) }"
           >
             {{ header.title }}
-          </h2>
+          </p>
         </RouterLink>
       </nav>
       <div class="header-btn-layout mr-24">
@@ -44,19 +44,19 @@ const handleShowMenu = () => {
           v-if="!showMenu"
           @click="handleShowMenu"
         >
-          <h3 class="display-3">{{ locale.header.menu }}</h3>
+          <p class="display-3 font-700">{{ locale.header.menu }}</p>
         </button>
         <button class="close-btn pop-hide-animation" v-else @click="handleShowMenu">
-          <h3 class="display-3 blue-color tablet-screen">{{ locale.header.back }}</h3>
+          <p class="display-3 font-700 blue-color tablet-screen">{{ locale.header.back }}</p>
           <img src="@/assets/close-icon.svg" alt="close" class="mb-screen" />
         </button>
         <button class="secondary-btn operate-btn">
-          <h3 class="display-3">
+          <p class="display-3 font-700">
             {{ locale.header.sign_in }}
-          </h3>
+          </p>
         </button>
         <button class="primary-btn operate-btn">
-          <h3 class="display-3">{{ locale.header.start }}</h3>
+          <p class="display-3 font-700">{{ locale.header.start }}</p>
         </button>
       </div>
     </div>

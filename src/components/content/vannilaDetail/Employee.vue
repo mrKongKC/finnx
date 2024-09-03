@@ -10,9 +10,9 @@ import Icon from '@/components/common/Icon.vue'
       <div class="custom-h-600 flex-column gap-20">
         <div class="card relative">
           <div class="card-content-1">
-            <h3 class="display-3 blue-color text-center">
-              {{ locale.vannila_detail.employee.first_title }}
-            </h3>
+            <p class="display-3 font-700 blue-color text-center">
+              {{ locale.vannila_detail.employee.first_title }} 
+            </p>
           </div>
           <div class="absolute card-content-1-img-layout">
             <img
@@ -24,9 +24,9 @@ import Icon from '@/components/common/Icon.vue'
         </div>
         <div class="card-blue-l responsive-card-content-1">
           <div class="relative card-content-2">
-            <h3 class="display-3 blue-color text-center">
+            <p class="display-3 font-700 blue-color text-center">
               {{ locale.vannila_detail.employee.manage_permission }}
-            </h3>
+            </p>
             <div class="card-content-2-img-layout">
               <img
                 src="@/assets/img/content-employee-profile.png"
@@ -67,9 +67,9 @@ import Icon from '@/components/common/Icon.vue'
     <div class="grid-item-2 responsive-card-content-2">
       <div class="card-blue-l">
         <div class="relative card-content-2">
-          <h3 class="display-3 blue-color text-center">
+          <p class="display-3 font-700 blue-color text-center">
             {{ locale.vannila_detail.employee.manage_permission }}
-          </h3>
+          </p>
           <div class="card-content-2-img-layout">
             <img
               src="@/assets/img/content-employee-profile.png"

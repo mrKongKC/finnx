@@ -7,13 +7,13 @@ import locale from '@/config/locale.json'
     <div class="grid-container">
       <div class="grid-item">
         <h1 class="sherbet-color display-1">{{ locale.online_leave.title }}</h1>
-        <h2 class="black-color display-3 mt-10">{{ locale.online_leave.sub_title }}</h2>
+        <p class="black-color display-3 mt-10 font-700">{{ locale.online_leave.sub_title }}</p>
         <div class="flex-column-start gap-10 mt-20">
           <button class="secondary-btn custom-w">
-            <h3 class="display-3">{{ locale.common.detail }}</h3>
+            <p class="display-3 font-700">{{ locale.common.detail }}</p>
           </button>
           <button class="primary-btn custom-w">
-            <h3 class="display-3">{{ locale.common.start }}</h3>
+            <p class="display-3 font-700">{{ locale.common.start }}</p>
           </button>
         </div>
       </div>
