@@ -53,7 +53,7 @@ const setImgDefault = () => {
     </div>
     <div class="content" v-for="(item, index) in items" :key="index">
       <div class="img-container pop-hide-animation" v-if="currentIndex === index">
-        <img :src="item.image" class="responsive-image" :alt="`tab-${index}`" />
+        <img :src="item.image" class="responsive-image" :alt="`tab-${index}`" loading="lazy"/>
       </div>
     </div>
   </div>

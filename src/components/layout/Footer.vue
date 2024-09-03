@@ -13,7 +13,7 @@ const currentPath = (path: string) => {
     <div class="wrapper mw-lg w-100">
       <nav class="grid-footer-nav-layout pb-24 ml-24 mr-24" aria-label="footer">
         <div class="grid-item">
-          <img src="@/assets/logo.svg" alt="logo-finnx" class="mr-8" />
+          <img src="@/assets/logo.svg" alt="logo-finnx" class="mr-8" loading="lazy"/>
         </div>
         <RouterLink
           v-for="footer in headerRouter"
@@ -44,9 +44,9 @@ const currentPath = (path: string) => {
         </RouterLink>
       </nav>
       <nav class="footer-nav-layout-icon mr-24" aria-label="sub-footer-icon">
-        <img src="@/assets/img/line-icon.svg" alt="line" />
-        <img src="@/assets/img/facebook-icon.svg" alt="facebook" />
-        <img src="@/assets/img/tiktok-icon.svg" alt="tiktok" />
+        <img src="@/assets/img/line-icon.svg" alt="line" loading="lazy"/>
+        <img src="@/assets/img/facebook-icon.svg" alt="facebook" loading="lazy"/>
+        <img src="@/assets/img/tiktok-icon.svg" alt="tiktok" loading="lazy"/>
       </nav>
     </div>
   </footer>

@@ -50,14 +50,14 @@ const promotionList = computed(() => {
 </script>
 
 <template>
-  <div class="flex-column-center gap-32 w-100">
+  <div class="flex-column-center w-100">
     <div class="text-center">
-      <h2 class="sherbet-color display-1-responsive mw-550 text-center mt-24">
+      <h2 class="sherbet-color display-1-responsive mw-550 text-center">
         {{ locale.vannila_detail.promotion.title }}
       </h2>
-      <p class="font-600 mt-12">{{ locale.vannila_detail.promotion.detail }}</p>
+      <p class="font-600 mt-4">{{ locale.vannila_detail.promotion.detail }}</p>
     </div>
-    <div class="flex-column-center gap-32 w-100">
+    <div class="flex-column-center mt-40 gap-30 w-100">
       <div class="level-person mw-550">
         <div class="title-step-1">
           <p class="circle-blue font-600">1</p>
@@ -103,14 +103,14 @@ const promotionList = computed(() => {
           </VueSlider>
         </div>
       </div>
-      <div class="flex-column-center gap-24 w-100">
+      <div class="flex-column-center gap-30 w-100">
         <div class="title-step-2">
           <p class="circle-blue font-600">2</p>
           <p class="display-3 font-700 blue-color">
             {{ locale.vannila_detail.promotion.steps.step_2 }}
           </p>
         </div>
-        <div class="flex-center justify-between gap-12 w-100 custom-flex">
+        <div class="flex-center justify-between gap-12 w-100 mt-15 custom-flex">
           <div
             v-for="(content, index) in promotionList"
             :key="index"
@@ -125,7 +125,7 @@ const promotionList = computed(() => {
                   </p>
                 </div>
                 <div class="flex-center gap-12">
-                  <img :src="content.image" :alt="`package-icon-${index}`" />
+                  <img :src="content.image" :alt="`package-icon-${index}`" loading="lazy"/>
                   <p class="display-2 font-700 sherbet-color">{{ content.package.title }}</p>
                 </div>
                 <div class="flex-end gap-12 mt-12">
@@ -146,7 +146,7 @@ const promotionList = computed(() => {
                 v-for="(item, index) in content.list"
                 :key="index"
               >
-                <img src="@/assets/img/allow-icon.svg" alt="allow" />
+                <img src="@/assets/img/allow-icon.svg" alt="allow" loading="lazy"/>
                 <p class="black-color font-600">{{ item.title }}</p>
               </div>
               <button class="primary-btn w-100 mt-12">
@@ -256,6 +256,6 @@ const promotionList = computed(() => {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 24px;
+  gap: 30px;
 }
 </style>

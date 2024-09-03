@@ -33,6 +33,7 @@ import Icon from '@/components/common/Icon.vue'
                 src="@/assets/img/content-employee-profile.png"
                 alt="content-employee-profile"
                 class="responsive-image"
+                loading="lazy"
               />
             </div>
           </div>
@@ -74,6 +75,7 @@ import Icon from '@/components/common/Icon.vue'
               src="@/assets/img/content-employee-profile.png"
               alt="content-employee-profile"
               class="responsive-image"
+              loading="lazy"
             />
           </div>
         </div>
@@ -159,13 +161,12 @@ import Icon from '@/components/common/Icon.vue'
       gap: 32px;
 
       @media (max-width: $size-tablet) {
-        justify-content: space-between;
-        gap: 4px;
+        gap: 32px;
       }
 
       
       @media (max-width: $size-mobile) {
-        justify-content: initial;
+        gap: 4px;
       }
 
       @media (max-width: $size-sm) {

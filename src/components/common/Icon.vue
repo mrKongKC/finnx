@@ -17,7 +17,7 @@ withDefaults(
 </script>
 <template>
   <div class="icon-container blue-bg" :style="{ width: `${imgSize}px`, padding: `${padding}px` }">
-    <img :src="icon" alt="ref-icon" class="responsive-image" :class="{ 'require-white': white }" />
+    <img :src="icon" alt="ref-icon" class="responsive-image" :class="{ 'require-white': white }" loading="lazy"/>
   </div>
 </template>
 <style lang="scss" scoped>

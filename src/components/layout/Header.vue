@@ -23,7 +23,7 @@ const handleShowMenu = () => {
   <header class="flex-center justify-center pt-24 pb-24">
     <div class="wrapper mw-lg w-100">
       <nav class="header-nav-layout ml-24">
-        <img src="@/assets/logo.svg" alt="logo-finnx" class="mr-4" />
+        <img src="@/assets/logo.svg" alt="logo-finnx" class="mr-4" loading="lazy"/>
         <RouterLink
           v-for="header in headerRouter"
           to="/"
@@ -48,7 +48,7 @@ const handleShowMenu = () => {
         </button>
         <button class="close-btn pop-hide-animation" v-else @click="handleShowMenu">
           <p class="display-3 font-700 blue-color tablet-screen">{{ locale.header.back }}</p>
-          <img src="@/assets/close-icon.svg" alt="close" class="mb-screen" />
+          <img src="@/assets/close-icon.svg" alt="close" class="mb-screen" loading="lazy"/>
         </button>
         <button class="secondary-btn operate-btn">
           <p class="display-3 font-700">
