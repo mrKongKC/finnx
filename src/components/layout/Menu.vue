@@ -3,11 +3,9 @@
 import { headerRouter } from '@/config/masterData'
 import { useRoute } from 'vue-router'
 import locale from '@/config/locale.json'
+const route = useRoute()
 
-const currentPath = (path: string) => {
-  const route = useRoute()
-  return route.path === path
-}
+const currentPath = (path: string) => route.path === path
 </script>
 
 <template>
