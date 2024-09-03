@@ -15,7 +15,7 @@ import Footer from '@/components/layout/Footer.vue'
     <div class="mw-lg w-100 mt-60">
       <Overview />
     </div>
-    <div class="mw-lg w-100 pb-24 mt-50">
+    <div class="mw-lg w-100 mt-50">
       <Footer />
     </div>
   </div>
