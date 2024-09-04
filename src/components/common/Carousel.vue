@@ -14,7 +14,7 @@ const props = defineProps<{
   items: ItemProps[]
 }>()
 
-const currentIndex = ref<number>(2)
+const currentIndex = ref<number>(0)
 const activeAnimation = ref<boolean>(false)
 
 const onSwiper = (swiper: any) => {
