@@ -1,6 +1,8 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { defineProps, ref, watch } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css'
 
 interface ItemProps {
   title: string
@@ -12,8 +14,17 @@ const props = defineProps<{
   items: ItemProps[]
 }>()
 
-const currentIndex = ref<number>(0)
+const currentIndex = ref<number>(2)
 const activeAnimation = ref<boolean>(false)
+
+const onSwiper = (swiper: any) => {
+ console.log(swiper);
+};
+
+const onSlideChange = (e: any) => {
+  currentIndex.value = e.activeIndex
+}
+
 const setIndex = (index: number) => {
   if (index > props.items.length - 1) {
     currentIndex.value = 0
@@ -44,7 +55,7 @@ watch(currentIndex, (newVal, oldVale) => {
             class="step-container"
           >
             <div class="group-inside">
-              <img :src="step.iconStep" width="28px" :alt="`step-icon-${index}`"/>
+              <img :src="step.iconStep" width="28px" :alt="`step-icon-${index}`" />
             </div>
             <p class="font-600">{{ step.title }}</p>
           </li>
@@ -53,14 +64,31 @@ watch(currentIndex, (newVal, oldVale) => {
     </div>
     <div class="left-icon-container">
       <button class="primary-btn-circle" @click="setIndex(currentIndex - 1)">
-        <img src="@/assets/img/arrow-left-solid.svg" alt="left-icon"/>
+        <img src="@/assets/img/arrow-left-solid.svg" alt="left-icon" />
       </button>
     </div>
     <div class="right-icon-container">
       <button class="primary-btn-circle" @click="setIndex(currentIndex + 1)">
-        <img src="@/assets/img/arrow-right-solid.svg" alt="right-icon"/>
+        <img src="@/assets/img/arrow-right-solid.svg" alt="right-icon" />
       </button>
     </div>
+    <swiper
+      class="my-swiper-carousel"
+      :slides-per-view="1"
+      :space-between="50"
+      @swiper="onSwiper"
+      @slideChange="onSlideChange"
+    >
+      <swiper-slide v-for="(step, index) in items" :key="index">
+        <img
+          class="responsive-image"
+          :alt="items[currentIndex]?.title"
+          :src="items[currentIndex].image"
+          loading="lazy"
+        />
+      </swiper-slide>
+    </swiper>
+
     <div class="custom-w-70 absolute img-display-layout">
       <img
         :alt="items[currentIndex]?.title"
@@ -76,14 +104,42 @@ watch(currentIndex, (newVal, oldVale) => {
         :class="{ 'bottom-btn-active': index === currentIndex }"
         v-for="(step, index) in items"
         :key="index"
-        @click="setIndex(index)"
       ></button>
     </div>
   </div>
 </template>
+<style lang="scss">
+@import '@/assets/variable.scss';
+.my-swiper-carousel {
+  display: none;
+  @media (max-width: $size-mobile) {
+    max-width: 285px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: -20%;
+  }
+
+  @media (max-width: $size-sm) {
+    max-width: 232px;
+    bottom: -15%;
+  }
+
+  .swiper-slide {
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+</style>
 
 <style lang="scss" scoped>
 @import '@/assets/variable.scss';
+
 .card-blue-l {
   @media (max-width: $size-mobile) {
     padding: 32px 20px;
@@ -112,11 +168,13 @@ watch(currentIndex, (newVal, oldVale) => {
 }
 
 .img-display-layout {
+  display: block;
   height: 280px;
   bottom: -30.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   @media (max-width: $size-mobile) {
+    display: none;
     height: 300px;
     bottom: -20.5%;
   }
@@ -139,15 +197,15 @@ watch(currentIndex, (newVal, oldVale) => {
     border: 0px;
     background: $grey-wolf;
     cursor: pointer;
+  }
+
+  .bottom-btn-active {
+    background: $blue;
 
     &:hover {
       background: $blue;
       transition: all 0.3s ease-in-out;
     }
-  }
-
-  .bottom-btn-active {
-    background: $blue;
   }
 
   @media (max-width: $size-mobile) {
